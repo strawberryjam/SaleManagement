@@ -3,6 +3,225 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#textField20 {
+	 z-index: 13;
+	 width: 400px;
+	 height: 24px;
+	 top: 364px;
+	 left: 100px;
+	
+	 position: absolute;
+	 
+}
+
+#label20 {
+	 z-index: 13;
+	 width: 75px;
+	 height: 14px;
+	 top: 369px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField19 {
+	 z-index: 11;
+	 width: 130px;
+	 height: 24px;
+	 top: 314px;
+	 left: 369px;
+	
+	 position: absolute;
+	 
+}
+
+#label19 {
+	 z-index: 11;
+	 width: 75px;
+	 height: 14px;
+	 top: 319px;
+	 left: 289px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField18 {
+	 z-index: 10;
+	 width: 130px;
+	 height: 24px;
+	 top: 314px;
+	 left: 100px;
+	
+	 position: absolute;
+	 
+}
+
+#label18 {
+	 z-index: 10;
+	 width: 75px;
+	 height: 14px;
+	 top: 319px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField17 {
+	 z-index: 9;
+	 width: 400px;
+	 height: 24px;
+	 top: 268px;
+	 left: 100px;
+	
+	 position: absolute;
+	 
+}
+
+#label17 {
+	 z-index: 9;
+	 width: 75px;
+	 height: 14px;
+	 top: 273px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField14 {
+	 z-index: 7;
+	 width: 130px;
+	 height: 24px;
+	 top: 222px;
+	 left: 100px;
+	
+	 position: absolute;
+	 
+}
+
+#label14 {
+	 z-index: 7;
+	 width: 75px;
+	 height: 16px;
+	 top: 226px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField13 {
+	 z-index: 6;
+	 width: 400px;
+	 height: 24px;
+	 top: 176px;
+	 left: 100px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#label13 {
+	 z-index: 6;
+	 width: 75px;
+	 height: 14px;
+	 top: 181px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField11 {
+	 z-index: 3;
+	 width: 130px;
+	 height: 24px;
+	 top: 84px;
+	 left: 100px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#label11 {
+	 z-index: 3;
+	 width: 75px;
+	 height: 14px;
+	 top: 89px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#richText4 {
+	 z-index: 1;
+	 width: 191px;
+	 height: 28px;
+	 top: 11px;
+	 left: 17px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 color: rgb(255, 255, 255);
+	 
+}
+
+#container3 {
+	 z-index: 1;
+	 width: 890px;
+	 height: 50px;
+	 top: -1px;
+	 left: -1px;
+	
+	 position: absolute;
+	 border-top-style: none;
+	 border-top-width: 0px;
+	 border-left-style: none;
+	 border-left-width: 0px;
+	 border-right-style: none;
+	 border-right-width: 0px;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-width: 2px;
+	 -webkit-box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
+	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
+	 box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
+	
+	 background-color: transparent;
+	 border-bottom-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 
+}
+
 #richText3 {
 	 z-index: 1;
 	 width: 191px;
@@ -12,7 +231,8 @@
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
-	 font-size: 14px;
+	 font-size: 20px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -315,15 +535,15 @@
 	 border-bottom-left-radius: 0px;
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-width: 2px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
 	 -webkit-box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
 	 -moz-box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
 	 box-shadow: rgba(0, 0, 0, 0.199219) -3px 0px 6px 0px;
 	
 	 background-color: transparent;
+	 border-bottom-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-top-color: rgb(255, 127, 0);
 	 
 }
 
@@ -401,66 +621,6 @@
 	 height: 23px;
 	 top: 0px;
 	 left: 0px;
-	
-	 position: absolute;
-	 
-}
-
-#supmenu > .waf-menuItem {
-	 margin-bottom: 0px;
-	 
-}
-
-#supmenu > .waf-menuItem:not(.waf-menuItem-last) {
-	 margin-right: 5px;
-	 
-}
-
-#supmenu {
-	 z-index: 3;
-	 height: 23px;
-	 top: 5px;
-	 left: 5px;
-	 right: 5px;
-	
-	 position: absolute;
-	 
-}
-
-#supcontainer {
-	 z-index: 1;
-	 width: 900px;
-	 height: 600px;
-	 top: 85px;
-	 left: 175px;
-	
-	 position: absolute;
-	 
-}
-
-#supoutput {
-	 z-index: 4;
-	 top: 28px;
-	 bottom: 5px;
-	 left: 5px;
-	 right: 5px;
-	
-	 position: absolute;
-	 border-top-color: rgb(153, 153, 153);
-	 border-left-color: rgb(153, 153, 153);
-	 border-right-color: rgb(153, 153, 153);
-	 border-bottom-color: rgb(153, 153, 153);
-	 background-image: url('/images/bgrWood.jpg');
-	 background-repeat: repeat;
-	 
-}
-
-#supinput {
-	 z-index: 5;
-	 top: 28px;
-	 bottom: 5px;
-	 left: 5px;
-	 right: 5px;
 	
 	 position: absolute;
 	 
@@ -681,6 +841,92 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
+	 
+}
+
+#empcontainer {
+	 z-index: 1;
+	 width: 900px;
+	 height: 600px;
+	 top: 85px;
+	 left: 175px;
+	
+	 position: absolute;
+	 
+}
+
+#empmenu > .waf-menuItem {
+	 margin-bottom: 0px;
+	 
+}
+
+#empmenu > .waf-menuItem:not(.waf-menuItem-last) {
+	 margin-right: 5px;
+	 
+}
+
+#empmenu {
+	 z-index: 2;
+	 height: 23px;
+	 top: 5px;
+	 left: 5px;
+	 right: 5px;
+	
+	 position: absolute;
+	 
+}
+
+#empoutput {
+	 z-index: 3;
+	 top: 28px;
+	 bottom: 5px;
+	 left: 5px;
+	 right: 5px;
+	
+	 position: absolute;
+	 border-top-color: rgb(153, 153, 153);
+	 border-left-color: rgb(153, 153, 153);
+	 border-right-color: rgb(153, 153, 153);
+	 border-bottom-color: rgb(153, 153, 153);
+	 background-image: url('/images/bgrWood.jpg');
+	 background-repeat: repeat;
+	 
+}
+
+#empinput {
+	 z-index: 4;
+	 top: 28px;
+	 bottom: 5px;
+	 left: 5px;
+	 right: 5px;
+	
+	 position: absolute;
+	 background-image: url('/images/bgrWood.jpg');
+	 
+}
+
+#label12 {
+	 z-index: 4;
+	 width: 75px;
+	 height: 14px;
+	 top: 135px;
+	 left: 20px;
+	
+	 position: absolute;
+	 min-width: 75px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#textField12 {
+	 z-index: 5;
+	 width: 250px;
+	 height: 24px;
+	 top: 130px;
+	 left: 100px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
