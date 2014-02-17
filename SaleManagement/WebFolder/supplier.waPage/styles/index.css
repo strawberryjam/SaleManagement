@@ -3,6 +3,182 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#icon7 {
+	 z-index: 9;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 852px;
+	
+	 position: absolute;
+	 
+}
+
+#icon6 {
+	 z-index: 8;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 795px;
+	
+	 position: absolute;
+	 
+}
+
+#icon5 {
+	 z-index: 7;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 743px;
+	
+	 position: absolute;
+	 
+}
+
+#icon4 {
+	 z-index: 6;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 493px;
+	
+	 position: absolute;
+	 
+}
+
+#icon3 {
+	 z-index: 5;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 440px;
+	
+	 position: absolute;
+	 
+}
+
+#icon2 {
+	 z-index: 4;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 385px;
+	
+	 position: absolute;
+	 
+}
+
+#icon1 {
+	 z-index: 3;
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 335px;
+	
+	 position: absolute;
+	 
+}
+
+#menuItem1 {
+	 z-index: 10;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#richText5 {
+	 z-index: 9;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#container1 {
+	 z-index: 8;
+	 width: 890px;
+	 height: 567px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#menuItem2 {
+	 z-index: 7;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#richText6 {
+	 z-index: 6;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#container2 {
+	 z-index: 5;
+	 width: 890px;
+	 height: 567px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#menuItem3 {
+	 z-index: 4;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#richText7 {
+	 z-index: 3;
+	 width: 110px;
+	 height: 23px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#container3 {
+	 z-index: 2;
+	 width: 890px;
+	 height: 567px;
+	 top: 0px;
+	 left: 0px;
+	
+	 
+}
+
+#slider1 {
+	 width: 162px;
+	 height: 6px;
+	 top: 21px;
+	 left: 41px;
+	
+	 
+}
+
 #input.waf-state-selected {
 	 
 }
@@ -606,21 +782,6 @@
 	 
 }
 
-#rtxtLabel {
-	 z-index: 1;
-	 width: 100px;
-	 height: 25px;
-	 top: 13px;
-	 left: 15px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-size: 20px;
-	 font-weight: bold;
-	 color: rgb(255, 255, 255);
-	 
-}
-
 #btnLogout {
 	 z-index: 7;
 	 width: 100px;
@@ -645,6 +806,36 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
+	 
+}
+
+#rtxtOTitle {
+	 z-index: 1;
+	 width: 100px;
+	 height: 25px;
+	 top: 13px;
+	 left: 15px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: bold;
+	 color: rgb(255, 255, 255);
+	 
+}
+
+#rtxtITitle {
+	 width: 100px;
+	 height: 25px;
+	 top: 12px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: bold;
+	 color: rgb(255, 255, 255);
+	 z-index: 2;
 	 
 }
 
