@@ -3,9 +3,86 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#icoSClose {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 847px;
+	
+	 position: absolute;
+	 z-index: 8;
+	 
+}
+
+#icoSSave {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 798px;
+	
+	 position: absolute;
+	 z-index: 7;
+	 
+}
+
+#icoSDel {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 750px;
+	
+	 position: absolute;
+	 z-index: 6;
+	 
+}
+
+#icoSLast {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 492px;
+	
+	 position: absolute;
+	 z-index: 5;
+	 
+}
+
+#icoSNext {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 451px;
+	
+	 position: absolute;
+	 z-index: 4;
+	 
+}
+
+#icoSPrev {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 398px;
+	
+	 position: absolute;
+	 z-index: 3;
+	 
+}
+
+#icoSFirst {
+	 width: 24px;
+	 height: 24px;
+	 top: 12px;
+	 left: 359px;
+	
+	 position: absolute;
+	 z-index: 2;
+	 
+}
+
 #textField20 {
 	 z-index: 13;
-	 width: 400px;
+	 width: 500px;
 	 height: 24px;
 	 top: 364px;
 	 left: 100px;
@@ -16,14 +93,15 @@
 
 #label20 {
 	 z-index: 13;
-	 width: 75px;
-	 height: 14px;
-	 top: 369px;
-	 left: 20px;
+	 width: 85px;
+	 height: 18px;
+	 top: 367px;
+	 left: 10px;
 	
 	 position: absolute;
-	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
@@ -32,7 +110,7 @@
 	 width: 130px;
 	 height: 24px;
 	 top: 314px;
-	 left: 369px;
+	 left: 469px;
 	
 	 position: absolute;
 	 
@@ -41,13 +119,14 @@
 #label19 {
 	 z-index: 11;
 	 width: 75px;
-	 height: 14px;
-	 top: 319px;
-	 left: 289px;
+	 height: 18px;
+	 top: 317px;
+	 left: 389px;
 	
 	 position: absolute;
 	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
 	 
 }
 
@@ -64,20 +143,21 @@
 
 #label18 {
 	 z-index: 10;
-	 width: 75px;
-	 height: 14px;
-	 top: 319px;
-	 left: 20px;
+	 width: 85px;
+	 height: 18px;
+	 top: 317px;
+	 left: 10px;
 	
 	 position: absolute;
-	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
 #textField17 {
 	 z-index: 9;
-	 width: 400px;
+	 width: 500px;
 	 height: 24px;
 	 top: 268px;
 	 left: 100px;
@@ -88,14 +168,15 @@
 
 #label17 {
 	 z-index: 9;
-	 width: 75px;
-	 height: 14px;
-	 top: 273px;
-	 left: 20px;
+	 width: 85px;
+	 height: 18px;
+	 top: 271px;
+	 left: 10px;
 	
 	 position: absolute;
-	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
@@ -112,20 +193,21 @@
 
 #label14 {
 	 z-index: 7;
-	 width: 75px;
-	 height: 16px;
-	 top: 226px;
-	 left: 20px;
+	 width: 85px;
+	 height: 20px;
+	 top: 224px;
+	 left: 10px;
 	
 	 position: absolute;
-	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
 #textField13 {
 	 z-index: 6;
-	 width: 400px;
+	 width: 500px;
 	 height: 24px;
 	 top: 176px;
 	 left: 100px;
@@ -137,39 +219,15 @@
 
 #label13 {
 	 z-index: 6;
-	 width: 75px;
-	 height: 14px;
-	 top: 181px;
-	 left: 20px;
-	
-	 position: absolute;
-	 min-width: 75px;
-	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
-#textField11 {
-	 z-index: 3;
-	 width: 130px;
-	 height: 24px;
-	 top: 84px;
-	 left: 100px;
+	 width: 85px;
+	 height: 18px;
+	 top: 179px;
+	 left: 10px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
-#label11 {
-	 z-index: 3;
-	 width: 75px;
-	 height: 14px;
-	 top: 89px;
-	 left: 20px;
-	
-	 position: absolute;
-	 min-width: 75px;
-	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
@@ -907,14 +965,15 @@
 
 #label12 {
 	 z-index: 4;
-	 width: 75px;
-	 height: 14px;
-	 top: 135px;
-	 left: 20px;
+	 width: 85px;
+	 height: 18px;
+	 top: 133px;
+	 left: 10px;
 	
 	 position: absolute;
-	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
 	 
 }
 
@@ -923,6 +982,32 @@
 	 width: 250px;
 	 height: 24px;
 	 top: 130px;
+	 left: 100px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#label11 {
+	 z-index: 3;
+	 width: 85px;
+	 height: 18px;
+	 top: 87px;
+	 left: 10px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 15px;
+	 min-width: 85px;
+	 
+}
+
+#textField11 {
+	 z-index: 3;
+	 width: 130px;
+	 height: 24px;
+	 top: 84px;
 	 left: 100px;
 	
 	 position: absolute;
