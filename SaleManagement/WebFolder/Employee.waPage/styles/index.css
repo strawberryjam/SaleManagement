@@ -4,79 +4,79 @@
 */
 
 #icoSClose {
+	 z-index: 8;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 847px;
 	
 	 position: absolute;
-	 z-index: 8;
 	 
 }
 
 #icoSSave {
+	 z-index: 7;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 798px;
 	
 	 position: absolute;
-	 z-index: 7;
 	 
 }
 
 #icoSDel {
+	 z-index: 6;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 750px;
 	
 	 position: absolute;
-	 z-index: 6;
 	 
 }
 
 #icoSLast {
+	 z-index: 5;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 492px;
 	
 	 position: absolute;
-	 z-index: 5;
 	 
 }
 
 #icoSNext {
+	 z-index: 4;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 451px;
 	
 	 position: absolute;
-	 z-index: 4;
 	 
 }
 
 #icoSPrev {
+	 z-index: 3;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 398px;
 	
 	 position: absolute;
-	 z-index: 3;
 	 
 }
 
 #icoSFirst {
+	 z-index: 2;
 	 width: 24px;
 	 height: 24px;
 	 top: 12px;
 	 left: 359px;
 	
 	 position: absolute;
-	 z-index: 2;
 	 
 }
 
@@ -85,7 +85,7 @@
 	 width: 500px;
 	 height: 24px;
 	 top: 364px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 
@@ -96,7 +96,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 367px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -110,7 +110,7 @@
 	 width: 130px;
 	 height: 24px;
 	 top: 314px;
-	 left: 469px;
+	 left: 479px;
 	
 	 position: absolute;
 	 
@@ -121,7 +121,7 @@
 	 width: 75px;
 	 height: 18px;
 	 top: 317px;
-	 left: 389px;
+	 left: 399px;
 	
 	 position: absolute;
 	 min-width: 75px;
@@ -135,7 +135,7 @@
 	 width: 130px;
 	 height: 24px;
 	 top: 314px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 
@@ -146,7 +146,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 317px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -160,7 +160,7 @@
 	 width: 500px;
 	 height: 24px;
 	 top: 268px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 
@@ -171,7 +171,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 271px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -185,7 +185,7 @@
 	 width: 130px;
 	 height: 24px;
 	 top: 222px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 
@@ -196,7 +196,7 @@
 	 width: 85px;
 	 height: 20px;
 	 top: 224px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -210,7 +210,7 @@
 	 width: 500px;
 	 height: 24px;
 	 top: 176px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -222,7 +222,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 179px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -968,7 +968,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 133px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -982,7 +982,7 @@
 	 width: 250px;
 	 height: 24px;
 	 top: 130px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -994,7 +994,7 @@
 	 width: 85px;
 	 height: 18px;
 	 top: 87px;
-	 left: 10px;
+	 left: 20px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -1008,7 +1008,7 @@
 	 width: 130px;
 	 height: 24px;
 	 top: 84px;
-	 left: 100px;
+	 left: 110px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
