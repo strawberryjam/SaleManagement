@@ -3,6 +3,19 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#richText3 {
+	 z-index: 1;
+	 width: 191px;
+	 height: 28px;
+	 top: 11px;
+	 left: 17px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 14px;
+	 
+}
+
 #dataGrid1 .waf-dataGrid-header .waf-dataGrid-cell {
 	 font-weight: normal;
 	 color: rgb(76, 76, 76);
@@ -24,10 +37,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -47,6 +56,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -65,10 +80,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -88,6 +99,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -106,10 +123,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -129,6 +142,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -147,10 +166,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -170,6 +185,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -188,10 +209,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -211,6 +228,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -229,10 +252,6 @@
 	 box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.148438) 1px 1px 2px 0px;
 	
 	 background-color: rgb(239, 239, 239);
-	 border-top-color: rgb(0, 0, 0);
-	 border-left-color: rgb(0, 0, 0);
-	 border-right-color: rgb(0, 0, 0);
-	 border-bottom-color: rgb(0, 0, 0);
 	 border-bottom-width: 1px;
 	 border-right-width: 1px;
 	 border-left-width: 1px;
@@ -252,6 +271,12 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 font-size: 14px;
+	 color: rgb(0, 0, 0);
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
 	 
 }
 
@@ -465,6 +490,15 @@
 	 background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:-o-linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
 	 background-image:linear-gradient(top, rgb(255, 255, 255) 0%,rgb(242, 242, 242) 31%,rgb(242, 242, 242) 59%,rgb(255, 255, 255) 82%);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -486,6 +520,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -507,6 +550,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -528,6 +580,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -549,6 +610,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -570,6 +640,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
@@ -591,6 +670,15 @@
 	 border-left-color: rgb(255, 127, 0);
 	 border-right-color: rgb(255, 127, 0);
 	 border-bottom-color: rgb(255, 127, 0);
+	 color: rgb(0, 0, 0);
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
 	 
 }
 
