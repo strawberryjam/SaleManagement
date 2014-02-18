@@ -35,11 +35,22 @@
 						"Y": 320
 					}
 				}
+			},
+			"PaymentOut": {
+				"panelColor": "#D88CFF",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 36,
+						"Y": 720
+					},
+					"pathVisible": true
+				}
 			}
 		},
 		"model": {
 			"workspaceLeft": 0,
-			"workspaceTop": 0,
+			"workspaceTop": 500,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -346,6 +357,81 @@
 					"userDefined": true
 				}
 			]
+		},
+		{
+			"collectionName": "PaymentOutCollection",
+			"className": "PaymentOut",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "PaymentOutCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "PaymentOutDate",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "SupplierCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "SupplierName",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "MoneyPay",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "TypeProcess",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "ClosingDate",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "PaymentDate",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "DueDate",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "PayBalance",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				}
+			]
 		}
-	]
+	],
+	"type": []
 }
