@@ -47,20 +47,20 @@
 				}
 			},
 			"Product": {
-				"panelColor": "#B2A2C7",
+				"panelColor": "#E5B9B7",
 				"panel": {
 					"isOpen": "true",
-					"pathVisible": true,
 					"position": {
-						"X": 11,
-						"Y": 620
-					}
+						"X": 25,
+						"Y": 720
+					},
+					"pathVisible": true
 				}
 			}
 		},
 		"model": {
 			"workspaceLeft": 0,
-			"workspaceTop": 0,
+			"workspaceTop": 500,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -367,6 +367,69 @@
 					"userDefined": true
 				}
 			]
+		},
+		{
+			"collectionName": "ProductCollection",
+			"className": "Product",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "product_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "product_name",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "bar_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "unit",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "unit_price",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "ancient_times",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "supplier_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "image",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				}
+			]
 		}
-	]
+	],
+	"type": []
 }
