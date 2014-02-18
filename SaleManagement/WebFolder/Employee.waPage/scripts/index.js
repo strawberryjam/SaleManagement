@@ -2,6 +2,9 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnSubSelect = {};	// @button
+	var btnShowAll = {};	// @button
+	var empDataGrid = {};	// @dataGrid
 	var txtTel = {};	// @textField
 	var txtAddress = {};	// @textField
 	var txtPostcode = {};	// @textField
@@ -20,6 +23,37 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	btnSubSelect.click = function btnSubSelect_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		function buildSelection(event)
+     	{
+     		var collec = event.entityCollection;
+         	sources.employee.setEntityCollection(collec);
+     	}
+     	var selection = sources.employee.getSelection();
+  		var collection = sources.employee.getEntityCollection();
+        collection.buildFromSelection(selection, { onSuccess: buildSelection });
+	};// @lock
+
+	btnShowAll.click = function btnShowAll_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		sources.employee.allEntities({ keepOrderBy: true } );
+	};// @lock
+
+	empDataGrid.onRowDblClick = function empDataGrid_onRowDblClick (event)// @startlock
+	{// @endlock
+		// Add your code here
+		$$("empcontainer").selectTab(2);
+		
+		//Set readonly cho input
+		$$("txtempCode").setReadOnly(true);
+		
+		//Set focus cho input
+		$$("txtempName").focus();
+	};// @lock
 
 	txtTel.keydown = function txtTel_keydown (event)// @startlock
 	{// @endlock
@@ -266,6 +300,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnSubSelect", "click", btnSubSelect.click, "WAF");
+	WAF.addListener("btnShowAll", "click", btnShowAll.click, "WAF");
+	WAF.addListener("empDataGrid", "onRowDblClick", empDataGrid.onRowDblClick, "WAF");
 	WAF.addListener("txtTel", "keydown", txtTel.keydown, "WAF");
 	WAF.addListener("txtAddress", "keydown", txtAddress.keydown, "WAF");
 	WAF.addListener("txtPostcode", "keydown", txtPostcode.keydown, "WAF");
