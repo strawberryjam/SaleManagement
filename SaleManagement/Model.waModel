@@ -35,11 +35,22 @@
 						"Y": 320
 					}
 				}
+			},
+			"Product": {
+				"panelColor": "#B2A2C7",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 11,
+						"Y": 620
+					},
+					"pathVisible": true
+				}
 			}
 		},
 		"model": {
 			"workspaceLeft": 0,
-			"workspaceTop": 0,
+			"workspaceTop": 600,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -301,25 +312,94 @@
 				{
 					"name": "delSelected",
 					"applyTo": "entityCollection",
-					"scope": "publicOnServer",
+					"scope": "public",
 					"from": "model.Supplier.collectionMethods.delSelected",
 					"userDefined": true
 				},
 				{
 					"name": "getSessionInfo",
 					"applyTo": "entityCollection",
-					"scope": "publicOnServer",
+					"scope": "public",
 					"from": "model.Supplier.collectionMethods.getSessionInfo",
 					"userDefined": true
 				},
 				{
 					"name": "setSessionInfo",
 					"applyTo": "entityCollection",
-					"scope": "publicOnServer",
+					"scope": "public",
 					"from": "model.Supplier.collectionMethods.setSessionInfo",
 					"userDefined": true
 				}
 			]
+		},
+		{
+			"collectionName": "ProductCollection",
+			"className": "Product",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "product_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "product_name",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "bar_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "unit",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "unit_price",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "under_bill",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "ancient_times",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "supplier_code",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "image",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				}
+			]
 		}
-	]
+	],
+	"type": []
 }
