@@ -367,7 +367,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.supplier.newEntity();
 		
 		//Show Input
-		$$("suppliercontainer").selectTab(2);
+		$$("supcontainer").selectTab(2);
 		
 		//Remove readonly cho input
 		$$("txtSupCode").setReadOnly(false);
