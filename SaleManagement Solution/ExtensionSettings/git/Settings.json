@@ -1,5 +1,5 @@
 ﻿{
-	"serverType": "github",
+	"serverType": "none",
 	"gitURL": "https://github.com/strawberryjam",
 	"gitEmail": "sjgithub@gmail.com",
 	"gitIsPrivateRepository": "false"
