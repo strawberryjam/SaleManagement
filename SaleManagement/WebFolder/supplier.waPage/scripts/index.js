@@ -2,6 +2,8 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var documentEvent = {};	// @document
+	var btnLogout = {};	// @button
 	var btnDelete = {};	// @button
 	var txtFirstPayMoney = {};	// @textField
 	var btnSubselected = {};	// @button
@@ -31,6 +33,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	{// @endlock
+		if(checkLogin() == false)
+			window.location.href = "/index/";
+	};// @lock
+
+	btnLogout.click = function btnLogout_click (event)// @startlock
+	{// @endlock
+		WAF.directory.logout({
+		    onSuccess: function(event) {
+		        location.reload();
+		    },
+		    onError: function(error) {
+		        jAlert(error['error'][0].message,"アラート");
+		    }
+		});
+	};// @lock
 
 	btnDelete.click = function btnDelete_click (event)// @startlock
 	{// @endlock
@@ -355,6 +375,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
+	WAF.addListener("btnLogout", "click", btnLogout.click, "WAF");
 	WAF.addListener("btnDelete", "click", btnDelete.click, "WAF");
 	WAF.addListener("txtFirstPayMoney", "keydown", txtFirstPayMoney.keydown, "WAF");
 	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");

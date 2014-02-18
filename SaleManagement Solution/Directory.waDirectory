@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<directory>
-	<group ID="01000000000000000000000000000000" name="Admin">
-	</group>
+﻿<?xml version="1.0" encoding="UTF-8"?><directory>
+	<group ID="01000000000000000000000000000000" name="Admin">	</group>
+	<user ID="A0C536034885ED44AF0A9072302B8AFB" name="vuthuan" fullName="vu van thuan" password="4579482d3b92731241c873333552bcd2" thumbnailPath="vuthuan.png"/>
 </directory>
-
