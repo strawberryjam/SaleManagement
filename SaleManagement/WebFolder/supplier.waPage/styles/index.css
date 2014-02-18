@@ -3,6 +3,21 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#richText17 {
+	 z-index: 119;
+	 width: 75px;
+	 height: 18px;
+	 top: 211px;
+	 left: 452px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
 #richText7 {
 	 z-index: 118;
 	 width: 75px;
@@ -68,7 +83,7 @@
 	 width: 55px;
 	 height: 18px;
 	 top: 169px;
-	 left: 456px;
+	 left: 452px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -83,7 +98,7 @@
 	 width: 60px;
 	 height: 18px;
 	 top: 126px;
-	 left: 456px;
+	 left: 452px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -1008,7 +1023,7 @@
 	 width: 320px;
 	 height: 24px;
 	 top: 123px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1021,7 +1036,7 @@
 	 width: 320px;
 	 height: 24px;
 	 top: 166px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1034,7 +1049,7 @@
 	 width: 142px;
 	 height: 24px;
 	 top: 123px;
-	 left: 532px;
+	 left: 533px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1047,7 +1062,7 @@
 	 width: 142px;
 	 height: 24px;
 	 top: 166px;
-	 left: 532px;
+	 left: 533px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1060,7 +1075,7 @@
 	 width: 140px;
 	 height: 24px;
 	 top: 209px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1070,10 +1085,10 @@
 
 #txtAddress {
 	 z-index: 97;
-	 width: 552px;
+	 width: 558px;
 	 height: 24px;
 	 top: 252px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1086,7 +1101,7 @@
 	 width: 140px;
 	 height: 24px;
 	 top: 295px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1099,7 +1114,7 @@
 	 width: 140px;
 	 height: 24px;
 	 top: 295px;
-	 left: 532px;
+	 left: 535px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1109,10 +1124,10 @@
 
 #txtEmail {
 	 z-index: 103;
-	 width: 552px;
+	 width: 558px;
 	 height: 24px;
 	 top: 381px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1122,10 +1137,10 @@
 
 #txtBankInfo {
 	 z-index: 105;
-	 width: 552px;
+	 width: 558px;
 	 height: 24px;
 	 top: 472px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1138,7 +1153,7 @@
 	 width: 142px;
 	 height: 24px;
 	 top: 338px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1148,10 +1163,10 @@
 
 #txtEmpName {
 	 z-index: 112;
-	 width: 401px;
+	 width: 409px;
 	 height: 24px;
 	 top: 338px;
-	 left: 271px;
+	 left: 266px;
 	
 	 position: absolute;
 	 font-size: 12px;
@@ -1164,7 +1179,7 @@
 	 width: 90px;
 	 height: 24px;
 	 top: 424px;
-	 left: 118px;
+	 left: 117px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -1188,9 +1203,22 @@
 	 width: 148px;
 	 height: 24px;
 	 top: 424px;
-	 left: 522px;
+	 left: 527px;
 	
 	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtFirstPayMoney {
+	 z-index: 120;
+	 width: 142px;
+	 height: 24px;
+	 top: 209px;
+	 left: 533px;
+	
+	 position: absolute;
+	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
 	 
 }

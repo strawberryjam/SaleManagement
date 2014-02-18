@@ -2,6 +2,10 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnDelete = {};	// @button
+	var txtFirstPayMoney = {};	// @textField
+	var btnSubselected = {};	// @button
+	var btnShowall = {};	// @button
 	var txtBankInfo = {};	// @textField
 	var txtEmail = {};	// @textField
 	var txtEmpCode = {};	// @textField
@@ -27,6 +31,48 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	btnDelete.click = function btnDelete_click (event)// @startlock
+	{// @endlock
+		var selection = sources.supplier.getSelection();
+		var numSel = selection.countSelected();
+		if (numSel > 0) {
+		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
+		        if (flag) {
+		            var posArr = selection.getSelectedRows();
+		            WAF.sources.supplier.delSelected({
+		                onSuccess: function(evt) {
+		                    WAF.sources.supplier.setEntityCollection(evt.result);
+		                }
+		            }, posArr);
+		        }
+		    });
+		}
+	};// @lock
+
+	txtFirstPayMoney.keydown = function txtFirstPayMoney_keydown (event)// @startlock
+	{// @endlock
+		if(event.keyCode == 13){
+			$$("txtPostCode").focus();
+		}
+	};// @lock
+
+	btnSubselected.click = function btnSubselected_click (event)// @startlock
+	{// @endlock
+		function buildSelection(event)
+     	{
+     		var collec = event.entityCollection;
+         	sources.supplier.setEntityCollection(collec);
+     	}
+     	var selection = sources.supplier.getSelection();
+  		var collection = sources.supplier.getEntityCollection();
+        collection.buildFromSelection(selection, { onSuccess: buildSelection });
+	};// @lock
+
+	btnShowall.click = function btnShowall_click (event)// @startlock
+	{// @endlock
+		sources.supplier.allEntities({ keepOrderBy: true } );
+	};// @lock
 
 	txtBankInfo.keydown = function txtBankInfo_keydown (event)// @startlock
 	{// @endlock
@@ -308,6 +354,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnDelete", "click", btnDelete.click, "WAF");
+	WAF.addListener("txtFirstPayMoney", "keydown", txtFirstPayMoney.keydown, "WAF");
+	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");
+	WAF.addListener("btnShowall", "click", btnShowall.click, "WAF");
 	WAF.addListener("txtBankInfo", "keydown", txtBankInfo.keydown, "WAF");
 	WAF.addListener("txtEmail", "keydown", txtEmail.keydown, "WAF");
 	WAF.addListener("txtEmpCode", "keydown", txtEmpCode.keydown, "WAF");
