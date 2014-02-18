@@ -1,4 +1,21 @@
-﻿
+﻿WAF.Widget.prototype.center = function(){
+ var jQObject = this.$domNode;
+ jQObject.css({
+  "position" : "absolute",
+  "top"  : (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+  "left"  : (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+ });
+ 
+ // Bonus : center the $$ object even if we resize the window
+ $(window).resize(function(){
+  jQObject.css({
+   "position" : "absolute",
+   "top"  : (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+   "left"  : (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+  });
+ });
+ return this;
+}
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
@@ -10,6 +27,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
+		$$("loginContainer").center();
 		$$("txtusername").focus();
 	};// @lock
 

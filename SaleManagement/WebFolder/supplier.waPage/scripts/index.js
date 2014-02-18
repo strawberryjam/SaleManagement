@@ -1,4 +1,21 @@
-﻿
+﻿WAF.Widget.prototype.center = function(){
+ var jQObject = this.$domNode;
+ jQObject.css({
+  "position" : "absolute",
+  "top"  : (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+  "left"  : (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+ });
+ 
+ // Bonus : center the $$ object even if we resize the window
+ $(window).resize(function(){
+  jQObject.css({
+   "position" : "absolute",
+   "top"  : (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+   "left"  : (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+  });
+ });
+ return this;
+}
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
@@ -38,6 +55,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		if(checkLogin() == false)
 			window.location.href = "/index/";
+		else{
+			$$("supcontainer").center();
+		}
 	};// @lock
 
 	btnLogout.click = function btnLogout_click (event)// @startlock
@@ -344,7 +364,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnCreate.click = function btnCreate_click (event)// @startlock
 	{// @endlock
 		//New Entity
-		alert('ggggggggggggg');
 		sources.supplier.newEntity();
 		
 		//Show Input
