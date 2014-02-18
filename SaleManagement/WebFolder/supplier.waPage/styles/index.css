@@ -4,6 +4,7 @@
 */
 
 #richText17 {
+	 z-index: 119;
 	 width: 75px;
 	 height: 18px;
 	 top: 211px;
@@ -14,7 +15,6 @@
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 z-index: 119;
 	 
 }
 
@@ -1211,6 +1211,7 @@
 }
 
 #txtFirstPayMoney {
+	 z-index: 120;
 	 width: 142px;
 	 height: 24px;
 	 top: 209px;
@@ -1219,7 +1220,6 @@
 	 position: absolute;
 	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
-	 z-index: 120;
 	 
 }
 

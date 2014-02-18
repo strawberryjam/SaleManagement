@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnDelete = {};	// @button
 	var txtFirstPayMoney = {};	// @textField
 	var btnSubselected = {};	// @button
 	var btnShowall = {};	// @button
@@ -30,6 +31,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	btnDelete.click = function btnDelete_click (event)// @startlock
+	{// @endlock
+		var selection = sources.supplier.getSelection();
+		var numSel = selection.countSelected();
+		if (numSel > 0) {
+		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
+		        if (flag) {
+		            var posArr = selection.getSelectedRows();
+		            WAF.sources.supplier.delSelected({
+		                onSuccess: function(evt) {
+		                    WAF.sources.supplier.setEntityCollection(evt.result);
+		                }
+		            }, posArr);
+		        }
+		    });
+		}
+	};// @lock
 
 	txtFirstPayMoney.keydown = function txtFirstPayMoney_keydown (event)// @startlock
 	{// @endlock
@@ -335,6 +354,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnDelete", "click", btnDelete.click, "WAF");
 	WAF.addListener("txtFirstPayMoney", "keydown", txtFirstPayMoney.keydown, "WAF");
 	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");
 	WAF.addListener("btnShowall", "click", btnShowall.click, "WAF");
