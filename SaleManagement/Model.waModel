@@ -36,6 +36,7 @@
 					}
 				}
 			},
+<<<<<<< HEAD
 			"PaymentOut": {
 				"panelColor": "#D88CFF",
 				"panel": {
@@ -43,6 +44,15 @@
 					"position": {
 						"X": 36,
 						"Y": 720
+=======
+			"Product": {
+				"panelColor": "#B2A2C7",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 11,
+						"Y": 620
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					},
 					"pathVisible": true
 				}
@@ -50,7 +60,11 @@
 		},
 		"model": {
 			"workspaceLeft": 0,
+<<<<<<< HEAD
 			"workspaceTop": 500,
+=======
+			"workspaceTop": 600,
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -359,8 +373,13 @@
 			]
 		},
 		{
+<<<<<<< HEAD
 			"collectionName": "PaymentOutCollection",
 			"className": "PaymentOut",
+=======
+			"collectionName": "ProductCollection",
+			"className": "Product",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 			"attributes": [
 				{
 					"name": "ID",
@@ -371,54 +390,87 @@
 					"primKey": "true"
 				},
 				{
+<<<<<<< HEAD
 					"name": "PaymentOutCode",
+=======
+					"name": "product_code",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "PaymentOutDate",
+=======
+					"name": "product_name",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "SupplierCode",
+=======
+					"name": "bar_code",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "SupplierName",
+=======
+					"name": "unit",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "MoneyPay",
+=======
+					"name": "unit_price",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "TypeProcess",
+=======
+					"name": "under_bill",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "ClosingDate",
+=======
+					"name": "ancient_times",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "PaymentDate",
+=======
+					"name": "supplier_code",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"
 				},
 				{
+<<<<<<< HEAD
 					"name": "DueDate",
 					"scope": "public",
 					"type": "string",
@@ -426,6 +478,9 @@
 				},
 				{
 					"name": "PayBalance",
+=======
+					"name": "image",
+>>>>>>> 2f07065d1ee631cf61e94ceeeaf0f5b4fbfd2fa9
 					"scope": "public",
 					"type": "string",
 					"kind": "storage"

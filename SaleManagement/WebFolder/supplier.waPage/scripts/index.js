@@ -324,10 +324,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnCreate.click = function btnCreate_click (event)// @startlock
 	{// @endlock
 		//New Entity
+		alert('ggggggggggggg');
 		sources.supplier.newEntity();
 		
 		//Show Input
-		$$("supcontainer").selectTab(2);
+		$$("suppliercontainer").selectTab(2);
 		
 		//Remove readonly cho input
 		$$("txtSupCode").setReadOnly(false);
