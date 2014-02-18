@@ -55,6 +55,9 @@
 			"lastScriptLocation": {
 				"Supplier": {
 					"method": "Supplier/Supplier-methods.js"
+				},
+				"Employee": {
+					"method": "Employee/Employee-methods.js"
 				}
 			}
 		}
@@ -122,6 +125,29 @@
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "delSelected",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Employee.collectionMethods.delSelected",
+					"userDefined": true
+				},
+				{
+					"name": "getSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Employee.collectionMethods.getSessionInfo",
+					"userDefined": true
+				},
+				{
+					"name": "setSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Employee.collectionMethods.setSessionInfo",
+					"userDefined": true
 				}
 			]
 		},

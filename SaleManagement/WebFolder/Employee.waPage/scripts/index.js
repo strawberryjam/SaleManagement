@@ -1,7 +1,31 @@
-﻿
+﻿WAF.Widget.prototype.center = function(){
+	var jQObject = this.$domNode;
+	jQObject.css({
+		"position"	: "absolute",
+		"top"		: (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+		"left"		: (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+	});
+	
+	// Bonus : center the $$ object even if we resize the window
+	$(window).resize(function(){
+		jQObject.css({
+			"position"	: "absolute",
+			"top"		: (($(window).height() - jQObject.outerHeight()) / 2) +  $(window).scrollTop() - 70,
+			"left"		: (($(window).width() - jQObject.outerWidth()) / 2) + $(window).scrollLeft()
+		});
+	});
+	return this;
+}
+
+
+
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnSearch = {};	// @button
+	var button11 = {};	// @button
+	var button10 = {};	// @button
+	var btnDel = {};	// @button
 	var btnSubSelect = {};	// @button
 	var btnShowAll = {};	// @button
 	var empDataGrid = {};	// @dataGrid
@@ -23,6 +47,42 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	btnSearch.click = function btnSearch_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		$$('dlgSearch').center();
+		$$('dlgSearch').displayDialog();
+	};// @lock
+
+	button11.click = function button11_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //ok button
+	};// @lock
+
+	button10.click = function button10_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //cancel button
+	};// @lock
+
+	btnDel.click = function btnDel_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		var selection = sources.employee.getSelection();
+		var numSel = selection.countSelected();
+		if (numSel > 0) {
+		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
+		        if (flag) {
+		            var posArr = selection.getSelectedRows();
+		            WAF.sources.employee.delSelected({
+		                onSuccess: function(evt) {
+		                    WAF.sources.employee.setEntityCollection(evt.result);
+		                }
+		            }, posArr);
+		        }
+		    });
+		}
+	};// @lock
 
 	btnSubSelect.click = function btnSubSelect_click (event)// @startlock
 	{// @endlock
@@ -146,7 +206,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		        	jAlert(error['error'][0].message,"アラート");
 		        }
 		    });
-		}s
+		}
 	};// @lock
 
 	icoSFirst.click = function icoSFirst_click (event)// @startlock
@@ -181,7 +241,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    return false;
 		}
 		else {
-			sources.eployee.save({
+			sources.employee.save({
 		        onSuccess: function(event) {
 		        	sources.employee.selectNext();
 		        },
@@ -300,6 +360,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnSearch", "click", btnSearch.click, "WAF");
+	WAF.addListener("button11", "click", button11.click, "WAF");
+	WAF.addListener("button10", "click", button10.click, "WAF");
+	WAF.addListener("btnDel", "click", btnDel.click, "WAF");
 	WAF.addListener("btnSubSelect", "click", btnSubSelect.click, "WAF");
 	WAF.addListener("btnShowAll", "click", btnShowAll.click, "WAF");
 	WAF.addListener("empDataGrid", "onRowDblClick", empDataGrid.onRowDblClick, "WAF");
