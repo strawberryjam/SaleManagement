@@ -3,36 +3,56 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#textField12 {
-	 width: 401px;
-	 height: 24px;
-	 top: 292px;
-	 left: 271px;
+#richText7 {
+	 z-index: 118;
+	 width: 75px;
+	 height: 18px;
+	 top: 427px;
+	 left: 440px;
 	
 	 position: absolute;
-	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
-	 z-index: 112;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
 	 
 }
 
-#textField11 {
-	 width: 140px;
-	 height: 24px;
-	 top: 260px;
-	 left: 532px;
+#richText6 {
+	 z-index: 117;
+	 width: 30px;
+	 height: 18px;
+	 top: 427px;
+	 left: 14px;
 	
 	 position: absolute;
-	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
-	 z-index: 111;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#richText5 {
+	 z-index: 116;
+	 width: 45px;
+	 height: 18px;
+	 top: 427px;
+	 left: 257px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
 	 
 }
 
 #richText3 {
+	 z-index: 110;
 	 width: 33px;
 	 height: 18px;
-	 top: 263px;
+	 top: 298px;
 	 left: 456px;
 	
 	 position: absolute;
@@ -40,20 +60,6 @@
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 z-index: 110;
-	 
-}
-
-#textField10 {
-	 z-index: 109;
-	 width: 142px;
-	 height: 24px;
-	 top: 150px;
-	 left: 532px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -61,7 +67,7 @@
 	 z-index: 108;
 	 width: 55px;
 	 height: 18px;
-	 top: 152px;
+	 top: 169px;
 	 left: 456px;
 	
 	 position: absolute;
@@ -69,19 +75,6 @@
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField9 {
-	 z-index: 107;
-	 width: 142px;
-	 height: 24px;
-	 top: 116px;
-	 left: 532px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -89,7 +82,7 @@
 	 z-index: 106;
 	 width: 60px;
 	 height: 18px;
-	 top: 118px;
+	 top: 126px;
 	 left: 456px;
 	
 	 position: absolute;
@@ -100,44 +93,18 @@
 	 
 }
 
-#textField8 {
-	 z-index: 105;
-	 width: 552px;
-	 height: 24px;
-	 top: 366px;
-	 left: 122px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
 #richText14 {
 	 z-index: 104;
 	 width: 45px;
 	 height: 18px;
-	 top: 368px;
-	 left: 18px;
+	 top: 475px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField7 {
-	 z-index: 103;
-	 width: 307px;
-	 height: 24px;
-	 top: 328px;
-	 left: 122px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -145,27 +112,14 @@
 	 z-index: 102;
 	 width: 44px;
 	 height: 18px;
-	 top: 330px;
-	 left: 18px;
+	 top: 384px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField6 {
-	 z-index: 101;
-	 width: 142px;
-	 height: 24px;
-	 top: 292px;
-	 left: 121px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -173,27 +127,14 @@
 	 z-index: 100;
 	 width: 45px;
 	 height: 18px;
-	 top: 294px;
-	 left: 18px;
+	 top: 341px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField5 {
-	 z-index: 99;
-	 width: 140px;
-	 height: 24px;
-	 top: 260px;
-	 left: 121px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -201,27 +142,14 @@
 	 z-index: 98;
 	 width: 30px;
 	 height: 18px;
-	 top: 263px;
-	 left: 17px;
+	 top: 298px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField4 {
-	 z-index: 97;
-	 width: 552px;
-	 height: 24px;
-	 top: 222px;
-	 left: 120px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -229,27 +157,14 @@
 	 z-index: 96;
 	 width: 30px;
 	 height: 18px;
-	 top: 224px;
-	 left: 17px;
+	 top: 255px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField3 {
-	 z-index: 95;
-	 width: 140px;
-	 height: 24px;
-	 top: 186px;
-	 left: 119px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -257,27 +172,14 @@
 	 z-index: 94;
 	 width: 15px;
 	 height: 20px;
-	 top: 188px;
-	 left: 15px;
+	 top: 211px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 
-}
-
-#textField1 {
-	 z-index: 93;
-	 width: 320px;
-	 height: 24px;
-	 top: 150px;
-	 left: 118px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
@@ -285,8 +187,8 @@
 	 z-index: 92;
 	 width: 55px;
 	 height: 18px;
-	 top: 152px;
-	 left: 15px;
+	 top: 169px;
+	 left: 14px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
@@ -296,24 +198,11 @@
 	 
 }
 
-#textField2 {
-	 z-index: 5;
-	 width: 320px;
-	 height: 24px;
-	 top: 116px;
-	 left: 118px;
-	
-	 position: absolute;
-	 font-size: 12px;
-	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
 #richText4 {
 	 z-index: 4;
 	 width: 60px;
 	 height: 18px;
-	 top: 118px;
+	 top: 126px;
 	 left: 14px;
 	
 	 position: absolute;
@@ -973,7 +862,7 @@
 	 z-index: 2;
 	 width: 82px;
 	 height: 18px;
-	 top: 82px;
+	 top: 83px;
 	 left: 14px;
 	
 	 position: absolute;
@@ -1111,6 +1000,198 @@
 	 left: 850px;
 	
 	 position: absolute;
+	 
+}
+
+#txtSupName {
+	 z-index: 5;
+	 width: 320px;
+	 height: 24px;
+	 top: 123px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtFurigana {
+	 z-index: 93;
+	 width: 320px;
+	 height: 24px;
+	 top: 166px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtInitBalance {
+	 z-index: 107;
+	 width: 142px;
+	 height: 24px;
+	 top: 123px;
+	 left: 532px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtLastPaydate {
+	 z-index: 109;
+	 width: 142px;
+	 height: 24px;
+	 top: 166px;
+	 left: 532px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtPostCode {
+	 z-index: 95;
+	 width: 140px;
+	 height: 24px;
+	 top: 209px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtAddress {
+	 z-index: 97;
+	 width: 552px;
+	 height: 24px;
+	 top: 252px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtTel {
+	 z-index: 99;
+	 width: 140px;
+	 height: 24px;
+	 top: 295px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtFax {
+	 z-index: 111;
+	 width: 140px;
+	 height: 24px;
+	 top: 295px;
+	 left: 532px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtEmail {
+	 z-index: 103;
+	 width: 552px;
+	 height: 24px;
+	 top: 381px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtBankInfo {
+	 z-index: 105;
+	 width: 552px;
+	 height: 24px;
+	 top: 472px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtEmpCode {
+	 z-index: 101;
+	 width: 142px;
+	 height: 24px;
+	 top: 338px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtEmpName {
+	 z-index: 112;
+	 width: 401px;
+	 height: 24px;
+	 top: 338px;
+	 left: 271px;
+	
+	 position: absolute;
+	 font-size: 12px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#cbClosingDate {
+	 z-index: 113;
+	 width: 90px;
+	 height: 24px;
+	 top: 424px;
+	 left: 118px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#cbPaymentDate {
+	 z-index: 114;
+	 width: 105px;
+	 height: 24px;
+	 top: 424px;
+	 left: 310px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#cbTaxCalculation {
+	 z-index: 115;
+	 width: 148px;
+	 height: 24px;
+	 top: 424px;
+	 left: 522px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
