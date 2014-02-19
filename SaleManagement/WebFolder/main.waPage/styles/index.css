@@ -4,6 +4,7 @@
 */
 
 #button11 {
+	 z-index: 18;
 	 width: 151px;
 	 height: 77px;
 	 top: 343px;
@@ -18,11 +19,18 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 18;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
 	 
 }
 
 #button10 {
+	 z-index: 17;
 	 width: 151px;
 	 height: 77px;
 	 top: 343px;
@@ -37,11 +45,18 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 17;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
 	 
 }
 
 #button9 {
+	 z-index: 16;
 	 width: 151px;
 	 height: 77px;
 	 top: 228px;
@@ -56,11 +71,19 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 16;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
+	 font-style: normal;
 	 
 }
 
 #button8 {
+	 z-index: 15;
 	 width: 151px;
 	 height: 77px;
 	 top: 228px;
@@ -75,11 +98,18 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 15;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
 	 
 }
 
 #button7 {
+	 z-index: 14;
 	 width: 151px;
 	 height: 77px;
 	 top: 114px;
@@ -94,7 +124,13 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 14;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-size: 20px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
 	 
 }
 
@@ -114,10 +150,18 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
+	 font-size: 20px;
 	 
 }
 
 #TopContainer {
+	 z-index: 2;
 	 width: 890px;
 	 height: 50px;
 	 top: -1px;
@@ -148,11 +192,11 @@
 	 border-left-color: rgb(255, 212, 170);
 	 border-right-color: rgb(255, 212, 170);
 	 border-bottom-color: rgb(255, 212, 170);
-	 z-index: 2;
 	 
 }
 
 #btnLogout {
+	 z-index: 7;
 	 width: 100px;
 	 height: 30px;
 	 top: 257px;
@@ -175,11 +219,11 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 7;
 	 
 }
 
 #button5 {
+	 z-index: 6;
 	 width: 100px;
 	 height: 30px;
 	 top: 205px;
@@ -202,11 +246,11 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 6;
 	 
 }
 
 #button4 {
+	 z-index: 5;
 	 width: 100px;
 	 height: 30px;
 	 top: 157px;
@@ -229,11 +273,11 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 5;
 	 
 }
 
 #button3 {
+	 z-index: 4;
 	 width: 100px;
 	 height: 30px;
 	 top: 109px;
@@ -256,11 +300,11 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 4;
 	 
 }
 
 #button2 {
+	 z-index: 3;
 	 width: 100px;
 	 height: 30px;
 	 top: 61px;
@@ -283,11 +327,11 @@
 	-moz-border-radius-bottomleft: 0px;
 	 border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
-	 z-index: 3;
 	 
 }
 
 #button1 {
+	 z-index: 1;
 	 width: 100px;
 	 height: 30px;
 	 top: 13px;
@@ -310,11 +354,11 @@
 	 border-right-color: rgb(255, 127, 0);
 	 border-left-color: rgb(255, 127, 0);
 	 border-top-color: rgb(255, 127, 0);
-	 z-index: 1;
 	 
 }
 
 #LeftContainer {
+	 z-index: 1;
 	 width: 130px;
 	 height: 519px;
 	 top: 47px;
@@ -342,29 +386,28 @@
 	 border-left-color: rgb(255, 212, 170);
 	 border-right-color: rgb(255, 212, 170);
 	 border-bottom-color: rgb(255, 212, 170);
-	 z-index: 1;
 	 
 }
 
 #richText2 {
+	 z-index: 1;
 	 width: 66px;
 	 height: 23px;
 	 top: 0px;
 	 left: 0px;
 	
 	 position: absolute;
-	 z-index: 1;
 	 
 }
 
 #richText1 {
+	 z-index: 1;
 	 width: 66px;
 	 height: 23px;
 	 top: 0px;
 	 left: 0px;
 	
 	 position: absolute;
-	 z-index: 1;
 	 
 }
 
@@ -374,24 +417,24 @@
 }
 
 #maincontainer {
+	 z-index: 1;
 	 width: 900px;
 	 height: 600px;
 	 top: 100px;
 	 left: 170px;
 	
 	 position: absolute;
-	 z-index: 1;
 	 
 }
 
 #mainmenu {
+	 z-index: 2;
 	 height: 23px;
 	 top: 5px;
 	 left: 5px;
 	 right: 5px;
 	
 	 position: absolute;
-	 z-index: 2;
 	 
 }
 
@@ -406,6 +449,7 @@
 }
 
 #mainform_1 {
+	 z-index: 3;
 	 top: 28px;
 	 bottom: 5px;
 	 left: 5px;
@@ -413,12 +457,12 @@
 	
 	 position: absolute;
 	 background-image: url('/images/fbackground.jpg');
-	 z-index: 3;
 	 background-repeat: no-repeat;
 	 
 }
 
 #mainform_2 {
+	 z-index: 4;
 	 top: 28px;
 	 bottom: 5px;
 	 left: 5px;
@@ -426,11 +470,11 @@
 	
 	 position: absolute;
 	 background-image: url('/images/fbackground.jpg');
-	 z-index: 4;
 	 
 }
 
 #rtxtMTitle {
+	 z-index: 1;
 	 width: 100px;
 	 height: 25px;
 	 top: 13px;
@@ -441,29 +485,28 @@
 	 font-size: 20px;
 	 font-weight: bold;
 	 color: rgb(255, 255, 255);
-	 z-index: 1;
 	 
 }
 
 #menu_2 {
+	 z-index: 2;
 	 width: 66px;
 	 height: 23px;
 	 top: 0px;
 	 left: 0px;
 	
 	 position: absolute;
-	 z-index: 2;
 	 
 }
 
 #menu_1 {
+	 z-index: 1;
 	 width: 66px;
 	 height: 23px;
 	 top: 0px;
 	 left: 0px;
 	
 	 position: absolute;
-	 z-index: 1;
 	 
 }
 

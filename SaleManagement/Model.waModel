@@ -50,17 +50,28 @@
 				"panelColor": "#E5B9B7",
 				"panel": {
 					"isOpen": "true",
+					"pathVisible": true,
 					"position": {
 						"X": 25,
 						"Y": 720
-					},
-					"pathVisible": true
+					}
+				}
+			},
+			"Setting": {
+				"panelColor": "#548DD4",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 385,
+						"Y": 627
+					}
 				}
 			}
 		},
 		"model": {
-			"workspaceLeft": 0,
-			"workspaceTop": 500,
+			"workspaceLeft": 136,
+			"workspaceTop": 400,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -68,6 +79,9 @@
 				},
 				"Employee": {
 					"method": "Employee/Employee-methods.js"
+				},
+				"Setting": {
+					"method": "Setting/Setting-methods.js"
 				}
 			}
 		}
@@ -157,6 +171,151 @@
 					"applyTo": "entityCollection",
 					"scope": "public",
 					"from": "model.Employee.collectionMethods.setSessionInfo",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"className": "Product",
+			"collectionName": "ProductCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "product_code",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "product_name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "bar_code",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "unit",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "unit_price",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "ancient_times",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "supplier_code",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "image",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			]
+		},
+		{
+			"name": "Setting",
+			"className": "Setting",
+			"collectionName": "SettingCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "Company",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Furigana",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Postcode",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Address",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Tel",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Fax",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Email",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Url",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Logo",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				}
+			],
+			"methods": [
+				{
+					"name": "getFirst",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Setting.collectionMethods.getFirst",
 					"userDefined": true
 				}
 			]
@@ -367,69 +526,6 @@
 					"userDefined": true
 				}
 			]
-		},
-		{
-			"collectionName": "ProductCollection",
-			"className": "Product",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
-				},
-				{
-					"name": "product_code",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "product_name",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "bar_code",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "unit",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "unit_price",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "ancient_times",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "supplier_code",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "image",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				}
-			]
 		}
-	],
-	"type": []
+	]
 }
