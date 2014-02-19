@@ -40,13 +40,14 @@
 				}
 			},
 			"PaymentOut": {
-				"panelColor": "#D88CFF",
+				"panelColor": "rgb(255, 78, 89)",
 				"panel": {
 					"isOpen": "true",
 					"position": {
-						"X": 36,
-						"Y": 720
-					}
+						"X": 305,
+						"Y": 620
+					},
+					"pathVisible": true
 				}
 			},
 			"Setting": {
@@ -75,7 +76,7 @@
 		},
 		"model": {
 			"workspaceLeft": 0,
-			"workspaceTop": 0,
+			"workspaceTop": 400,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -594,6 +595,81 @@
 					"userDefined": true
 				}
 			]
+		},
+		{
+			"collectionName": "PaymentOutCollection",
+			"className": "PaymentOut",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "PaymentCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "PaymentDate",
+					"scope": "public",
+					"type": "date",
+					"kind": "storage"
+				},
+				{
+					"name": "SupCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "SupName",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "LastPayDate",
+					"scope": "public",
+					"type": "date",
+					"kind": "storage"
+				},
+				{
+					"name": "FirstPayMoney",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "DuePayDate",
+					"scope": "public",
+					"type": "date",
+					"kind": "storage"
+				},
+				{
+					"name": "Balance",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "PayType",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Total",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				}
+			]
 		}
-	]
+	],
+	"type": []
 }

@@ -6,6 +6,9 @@
 #SupDataGrid .waf-dataGrid-body {
 	 overflow-x: hidden;
 }
+#ShopDataGrid .waf-dataGrid-body {
+	 overflow-x: hidden;
+}
 #productDataGrid .waf-dataGrid-body {
 	 overflow-x: hidden;
 }
