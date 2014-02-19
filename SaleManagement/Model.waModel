@@ -70,7 +70,7 @@
 			}
 		},
 		"model": {
-			"workspaceLeft": 136,
+			"workspaceLeft": 0,
 			"workspaceTop": 400,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
@@ -82,6 +82,9 @@
 				},
 				"Setting": {
 					"method": "Setting/Setting-methods.js"
+				},
+				"Product": {
+					"method": "Product/Product-methods.js"
 				}
 			}
 		}
@@ -237,6 +240,29 @@
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "delSelected",
+					"applyTo": "collectionMethods",
+					"from": "model.Product.collectionMethods.delSelected",
+					"userDefined": true,
+					"scope": "publicOnServer"
+				},
+				{
+					"name": "getSessionInfo",
+					"applyTo": "collectionMethods",
+					"from": "model.Product.collectionMethods.getSessionInfo",
+					"userDefined": true,
+					"scope": "publicOnServer"
+				},
+				{
+					"name": "setSessionInfo",
+					"applyTo": "collectionMethods",
+					"from": "model.Product.collectionMethods.setSessionInfo",
+					"userDefined": true,
+					"scope": "publicOnServer"
 				}
 			]
 		},
