@@ -65,11 +65,11 @@
 				"panelColor": "#E5B9B7",
 				"panel": {
 					"isOpen": "true",
+					"pathVisible": true,
 					"position": {
 						"X": 569,
 						"Y": 378
-					},
-					"pathVisible": true
+					}
 				}
 			}
 		},
@@ -89,6 +89,9 @@
 				},
 				"Shop": {
 					"method": "Shop/Shop-methods.js"
+				},
+				"Product": {
+					"method": "Product/Product-methods.js"
 				}
 			}
 		}
@@ -179,6 +182,106 @@
 					"applyTo": "entityCollection",
 					"scope": "public",
 					"from": "model.Employee.collectionMethods.setSessionInfo",
+					"userDefined": true
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"className": "Product",
+			"collectionName": "ProductCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "ProductCode",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "ProductName",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Barcode",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Unit",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "UnitPrice",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "RetailPrice",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "SalePrice",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number"
+				},
+				{
+					"name": "SupCode",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "SupName",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "Logo",
+					"kind": "storage",
+					"scope": "public",
+					"type": "image"
+				}
+			],
+			"methods": [
+				{
+					"name": "delSelected",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Product.collectionMethods.delSelected",
+					"userDefined": true
+				},
+				{
+					"name": "getSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Product.collectionMethods.getSessionInfo",
+					"userDefined": true
+				},
+				{
+					"name": "setSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Product.collectionMethods.setSessionInfo",
 					"userDefined": true
 				}
 			]
@@ -489,80 +592,6 @@
 					"scope": "public",
 					"from": "model.Supplier.collectionMethods.setSessionInfo",
 					"userDefined": true
-				}
-			]
-		},
-		{
-			"collectionName": "ProductCollection",
-			"className": "Product",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"type": "long",
-					"autosequence": "true",
-					"unique": "true",
-					"primKey": "true"
-				},
-				{
-					"name": "ProductCode",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "ProductName",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "Barcode",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "Unit",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "UnitPrice",
-					"scope": "public",
-					"type": "number",
-					"kind": "storage"
-				},
-				{
-					"name": "RetailPrice",
-					"scope": "public",
-					"type": "number",
-					"kind": "storage"
-				},
-				{
-					"name": "SalePrice",
-					"scope": "public",
-					"type": "number",
-					"kind": "storage"
-				},
-				{
-					"name": "SupCode",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "SupName",
-					"scope": "public",
-					"type": "string",
-					"kind": "storage"
-				},
-				{
-					"name": "Logo",
-					"scope": "public",
-					"type": "image",
-					"kind": "storage"
 				}
 			]
 		}

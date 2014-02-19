@@ -777,6 +777,7 @@
 }
 
 #rtxtProductCode {
+	 z-index: 91;
 	 width: 82px;
 	 height: 18px;
 	 top: 83px;
@@ -787,22 +788,22 @@
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 z-index: 91;
 	 
 }
 
 #txtProductName {
+	 z-index: 92;
 	 width: 350px;
 	 height: 24px;
 	 top: 120px;
 	 left: 117px;
 	
 	 position: absolute;
-	 z-index: 92;
 	 
 }
 
 #rtxtProductName {
+	 z-index: 93;
 	 width: 45px;
 	 height: 18px;
 	 top: 123px;
@@ -813,7 +814,6 @@
 	 color: rgb(255, 255, 255);
 	 font-size: 15px;
 	 font-weight: bold;
-	 z-index: 93;
 	 
 }
 

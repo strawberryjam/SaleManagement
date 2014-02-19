@@ -6,6 +6,9 @@
 #SupDataGrid .waf-dataGrid-body {
 	 overflow-x: hidden;
 }
+#productDataGrid .waf-dataGrid-body {
+	 overflow-x: hidden;
+}
 #supcontainer {
     margin: 0px auto;
     width: 900px;
@@ -13,4 +16,8 @@
 #loginContainer{
 	margin: 0px auto;
     width: 485px;
+}
+#productcontainer{
+	margin: 0px auto;
+    width: 900px;
 }

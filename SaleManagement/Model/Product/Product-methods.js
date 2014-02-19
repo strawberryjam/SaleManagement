@@ -1,7 +1,6 @@
 
+
 (model.Product.collectionMethods.delSelected = function(selectedRows) {
-	// Add your code here;
-	
 	//Create an empty collection, that will be filled with entities to delete
 	var toDelete = ds.Product.createEntityCollection();
 
@@ -16,16 +15,16 @@
 	toDelete.remove();
 	// Return the new collection
 	return newColl;
-}).scope="public";
+}).scope = "public";
 
 
-(model.Product.collectionMethods.getSessionInfo = function(name,value) {
+(model.Product.collectionMethods.setSessionInfo = function(name, value) {
 	sessionStorage.lock();
 	sessionStorage[name] = value;
 	sessionStorage.unlock();
 }).scope = "public";
 
 
-(model.Product.collectionMethods.setSessionInfo = function(name) {
-	// Add your code here;
+(model.Product.collectionMethods.getSessionInfo = function(name) {
+	return sessionStorage[name];
 }).scope = "public";
