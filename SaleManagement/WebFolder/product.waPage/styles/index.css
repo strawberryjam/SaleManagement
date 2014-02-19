@@ -724,8 +724,8 @@
 	 z-index: 1;
 	 width: 900px;
 	 height: 600px;
-	 top: 98px;
-	 left: 151px;
+	 top: 97px;
+	 left: 211px;
 	
 	 position: absolute;
 	 
@@ -773,12 +773,12 @@
 	 left: 117px;
 	
 	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
 
 #rtxtProductCode {
-	 z-index: 91;
-	 width: 82px;
+	 width: 67px;
 	 height: 18px;
 	 top: 83px;
 	 left: 14px;
@@ -792,10 +792,9 @@
 }
 
 #txtProductName {
-	 z-index: 92;
-	 width: 350px;
+	 width: 400px;
 	 height: 24px;
-	 top: 120px;
+	 top: 130px;
 	 left: 117px;
 	
 	 position: absolute;
@@ -803,11 +802,184 @@
 }
 
 #rtxtProductName {
-	 z-index: 93;
 	 width: 45px;
 	 height: 18px;
-	 top: 123px;
+	 top: 133px;
 	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtBarcode {
+	 z-index: 95;
+	 width: 66px;
+	 height: 18px;
+	 top: 181px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtUnit {
+	 z-index: 97;
+	 width: 30px;
+	 height: 18px;
+	 top: 229px;
+	 left: 10px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtUnitPrice {
+	 z-index: 99;
+	 width: 30px;
+	 height: 18px;
+	 top: 277px;
+	 left: 9px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#txtBarcode {
+	 z-index: 94;
+	 width: 200px;
+	 height: 24px;
+	 top: 178px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtUnit {
+	 z-index: 96;
+	 width: 200px;
+	 height: 24px;
+	 top: 226px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtUnitPrice {
+	 z-index: 98;
+	 width: 200px;
+	 height: 24px;
+	 top: 274px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtRetailPrice {
+	 z-index: 100;
+	 width: 200px;
+	 height: 24px;
+	 top: 325px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtSalePrice {
+	 z-index: 102;
+	 width: 200px;
+	 height: 24px;
+	 top: 379px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtSupCode {
+	 z-index: 104;
+	 width: 200px;
+	 height: 24px;
+	 top: 428px;
+	 left: 117px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtSupName {
+	 z-index: 106;
+	 width: 300px;
+	 height: 24px;
+	 top: 428px;
+	 left: 345px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#rtxtRetailPrice {
+	 z-index: 101;
+	 width: 30px;
+	 height: 18px;
+	 top: 328px;
+	 left: 7px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtSalePrice {
+	 z-index: 103;
+	 width: 30px;
+	 height: 18px;
+	 top: 382px;
+	 left: 8px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtSupCode {
+	 z-index: 105;
+	 width: 45px;
+	 height: 18px;
+	 top: 431px;
+	 left: 9px;
 	
 	 position: absolute;
 	 font-family: Verdana, Geneva, sans-serif;
