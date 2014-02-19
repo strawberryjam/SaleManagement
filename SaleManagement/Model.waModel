@@ -5,34 +5,37 @@
 		"classes": {
 			"Shop": {
 				"panelColor": "#CCC1D9",
+				"methodInhVisible": "false",
 				"panel": {
 					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
-						"X": 25,
-						"Y": 20
+						"X": 554,
+						"Y": 22
 					}
 				}
 			},
 			"Supplier": {
 				"panelColor": "rgb(255, 255, 0)",
+				"methodInhVisible": "false",
 				"panel": {
 					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
-						"X": 368,
-						"Y": 20
+						"X": 295,
+						"Y": 22
 					}
 				}
 			},
 			"Employee": {
 				"panelColor": "#fff",
+				"methodInhVisible": "false",
 				"panel": {
 					"isOpen": "true",
 					"pathVisible": true,
 					"position": {
-						"X": 29,
-						"Y": 315
+						"X": 38,
+						"Y": 22
 					}
 				}
 			},
@@ -46,32 +49,33 @@
 					}
 				}
 			},
+			"Setting": {
+				"panelColor": "#548DD4",
+				"methodInhVisible": "false",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 37,
+						"Y": 405
+					}
+				}
+			},
 			"Product": {
 				"panelColor": "#E5B9B7",
 				"panel": {
 					"isOpen": "true",
-					"pathVisible": true,
 					"position": {
-						"X": 25,
-						"Y": 720
-					}
-				}
-			},
-			"Setting": {
-				"panelColor": "#548DD4",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 385,
-						"Y": 627
-					}
+						"X": 569,
+						"Y": 378
+					},
+					"pathVisible": true
 				}
 			}
 		},
 		"model": {
 			"workspaceLeft": 0,
-			"workspaceTop": 400,
+			"workspaceTop": 0,
 			"scriptMode": "manual",
 			"lastScriptLocation": {
 				"Supplier": {
@@ -83,8 +87,8 @@
 				"Setting": {
 					"method": "Setting/Setting-methods.js"
 				},
-				"Product": {
-					"method": "Product/Product-methods.js"
+				"Shop": {
+					"method": "Shop/Shop-methods.js"
 				}
 			}
 		}
@@ -103,6 +107,7 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
 				},
 				{
@@ -179,94 +184,6 @@
 			]
 		},
 		{
-			"name": "Product",
-			"className": "Product",
-			"collectionName": "ProductCollection",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
-				},
-				{
-					"name": "product_code",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "product_name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "bar_code",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "unit",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "unit_price",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "ancient_times",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "supplier_code",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "image",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				}
-			],
-			"methods": [
-				{
-					"name": "delSelected",
-					"applyTo": "collectionMethods",
-					"from": "model.Product.collectionMethods.delSelected",
-					"userDefined": true,
-					"scope": "publicOnServer"
-				},
-				{
-					"name": "getSessionInfo",
-					"applyTo": "collectionMethods",
-					"from": "model.Product.collectionMethods.getSessionInfo",
-					"userDefined": true,
-					"scope": "publicOnServer"
-				},
-				{
-					"name": "setSessionInfo",
-					"applyTo": "collectionMethods",
-					"from": "model.Product.collectionMethods.setSessionInfo",
-					"userDefined": true,
-					"scope": "publicOnServer"
-				}
-			]
-		},
-		{
 			"name": "Setting",
 			"className": "Setting",
 			"collectionName": "SettingCollection",
@@ -279,6 +196,7 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
 				},
 				{
@@ -359,54 +277,74 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
 				},
 				{
-					"name": "shop_code",
+					"name": "Shopcode",
 					"kind": "storage",
 					"scope": "public",
-					"limiting_length": 3,
 					"not_null": true,
-					"type": "string",
-					"fixedLength": 10,
-					"minLength": 3,
-					"maxLength": 10
+					"type": "string"
 				},
 				{
-					"name": "shop_name",
+					"name": "Shopname",
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
 				},
 				{
-					"name": "furigana",
+					"name": "Furigana",
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
 				},
 				{
-					"name": "post_code",
+					"name": "Postcode",
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
 				},
 				{
-					"name": "address",
+					"name": "Address",
 					"kind": "storage",
 					"scope": "public",
 					"type": "string"
 				},
 				{
-					"name": "tel",
+					"name": "Tel",
 					"kind": "storage",
 					"scope": "public",
-					"type": "byte"
+					"type": "string"
 				},
 				{
-					"name": "fax",
+					"name": "Fax",
 					"kind": "storage",
 					"scope": "public",
-					"type": "byte"
+					"type": "string"
+				}
+			],
+			"methods": [
+				{
+					"name": "delSelected",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Shop.collectionMethods.delSelected",
+					"userDefined": true
+				},
+				{
+					"name": "getSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Shop.collectionMethods.getSessionInfo",
+					"userDefined": true
+				},
+				{
+					"name": "setSessionInfo",
+					"applyTo": "entityCollection",
+					"scope": "public",
+					"from": "model.Shop.collectionMethods.setSessionInfo",
+					"userDefined": true
 				}
 			]
 		},
@@ -423,6 +361,7 @@
 					"unique": true,
 					"autosequence": true,
 					"type": "long",
+					"indexKind": "btree",
 					"primKey": true
 				},
 				{
@@ -550,6 +489,80 @@
 					"scope": "public",
 					"from": "model.Supplier.collectionMethods.setSessionInfo",
 					"userDefined": true
+				}
+			]
+		},
+		{
+			"collectionName": "ProductCollection",
+			"className": "Product",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "ProductCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "ProductName",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Barcode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Unit",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "UnitPrice",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "RetailPrice",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "SalePrice",
+					"scope": "public",
+					"type": "number",
+					"kind": "storage"
+				},
+				{
+					"name": "SupCode",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "SupName",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "Logo",
+					"scope": "public",
+					"type": "image",
+					"kind": "storage"
 				}
 			]
 		}

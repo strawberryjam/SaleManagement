@@ -3,58 +3,6 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#button11 {
-	 z-index: 18;
-	 width: 151px;
-	 height: 77px;
-	 top: 343px;
-	 left: 525px;
-	
-	 position: absolute;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-size: 20px;
-	 font-weight: normal;
-	 
-}
-
-#button10 {
-	 z-index: 17;
-	 width: 151px;
-	 height: 77px;
-	 top: 343px;
-	 left: 316px;
-	
-	 position: absolute;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-size: 20px;
-	 font-weight: normal;
-	 
-}
-
 #button9 {
 	 z-index: 16;
 	 width: 151px;
@@ -79,84 +27,6 @@
 	 font-size: 20px;
 	 font-weight: normal;
 	 font-style: normal;
-	 
-}
-
-#button8 {
-	 z-index: 15;
-	 width: 151px;
-	 height: 77px;
-	 top: 228px;
-	 left: 316px;
-	
-	 position: absolute;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-size: 20px;
-	 font-weight: normal;
-	 
-}
-
-#button7 {
-	 z-index: 14;
-	 width: 151px;
-	 height: 77px;
-	 top: 114px;
-	 left: 525px;
-	
-	 position: absolute;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
-	 font-size: 20px;
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-weight: normal;
-	 
-}
-
-#button6 {
-	 z-index: 13;
-	 width: 151px;
-	 height: 77px;
-	 top: 114px;
-	 left: 316px;
-	
-	 position: absolute;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-top-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-bottom-color: rgb(255, 127, 0);
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-weight: normal;
-	 font-size: 20px;
 	 
 }
 
@@ -330,33 +200,6 @@
 	 
 }
 
-#button1 {
-	 z-index: 1;
-	 width: 100px;
-	 height: 30px;
-	 top: 13px;
-	 left: 15px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-weight: normal;
-	 color: rgb(76, 76, 76);
-	 font-size: 14px;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-bottom-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-top-color: rgb(255, 127, 0);
-	 
-}
-
 #LeftContainer {
 	 z-index: 1;
 	 width: 130px;
@@ -507,6 +350,163 @@
 	 left: 0px;
 	
 	 position: absolute;
+	 
+}
+
+#gotoSetting {
+	 z-index: 13;
+	 width: 151px;
+	 height: 77px;
+	 top: 114px;
+	 left: 316px;
+	
+	 position: absolute;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
+	 font-size: 20px;
+	 
+}
+
+#gotoSupplier {
+	 z-index: 15;
+	 width: 151px;
+	 height: 77px;
+	 top: 228px;
+	 left: 316px;
+	
+	 position: absolute;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
+	 
+}
+
+#gotoProduct {
+	 z-index: 17;
+	 width: 151px;
+	 height: 77px;
+	 top: 343px;
+	 left: 316px;
+	
+	 position: absolute;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
+	 
+}
+
+#gotoEmployee {
+	 z-index: 18;
+	 width: 151px;
+	 height: 77px;
+	 top: 343px;
+	 left: 525px;
+	
+	 position: absolute;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-size: 20px;
+	 font-weight: normal;
+	 
+}
+
+#gotoShop {
+	 z-index: 14;
+	 width: 151px;
+	 height: 77px;
+	 top: 114px;
+	 left: 525px;
+	
+	 position: absolute;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-top-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-bottom-color: rgb(255, 127, 0);
+	 font-size: 20px;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
+	 
+}
+
+#gotoMain {
+	 z-index: 1;
+	 width: 100px;
+	 height: 30px;
+	 top: 13px;
+	 left: 15px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
+	 color: rgb(76, 76, 76);
+	 font-size: 14px;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-bottom-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-top-color: rgb(255, 127, 0);
 	 
 }
 

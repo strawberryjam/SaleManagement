@@ -340,33 +340,6 @@
 	 
 }
 
-#button1 {
-	 z-index: 1;
-	 width: 100px;
-	 height: 30px;
-	 top: 13px;
-	 left: 15px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 font-weight: normal;
-	 color: rgb(76, 76, 76);
-	 font-size: 14px;
-	 border-top-left-radius: 0px;
-	-moz-border-radius-topleft: 0px;
-	 border-top-right-radius: 0px;
-	-moz-border-radius-topright: 0px;
-	 border-bottom-left-radius: 0px;
-	-moz-border-radius-bottomleft: 0px;
-	 border-bottom-right-radius: 0px;
-	-moz-border-radius-bottomright: 0px;
-	 border-bottom-color: rgb(255, 127, 0);
-	 border-right-color: rgb(255, 127, 0);
-	 border-left-color: rgb(255, 127, 0);
-	 border-top-color: rgb(255, 127, 0);
-	 
-}
-
 #SupDataGrid .waf-dataGrid-body {
 	 font-family: Verdana, Geneva, sans-serif;
 	 
@@ -1220,6 +1193,33 @@
 	 position: absolute;
 	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#gotoMain {
+	 z-index: 1;
+	 width: 100px;
+	 height: 30px;
+	 top: 13px;
+	 left: 15px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 font-weight: normal;
+	 color: rgb(76, 76, 76);
+	 font-size: 14px;
+	 border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	 border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	 border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	 border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	 border-bottom-color: rgb(255, 127, 0);
+	 border-right-color: rgb(255, 127, 0);
+	 border-left-color: rgb(255, 127, 0);
+	 border-top-color: rgb(255, 127, 0);
 	 
 }
 

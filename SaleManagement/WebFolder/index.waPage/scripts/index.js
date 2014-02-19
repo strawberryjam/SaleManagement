@@ -39,7 +39,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    WAF.directory.login({
 		        onSuccess: function(event) {
 		            if (event.result === true) {
-		                window.location.href = "/supplier/";
+		                window.location.href = "/main/";
 		            }
 		            else {
 		                $$("iconuswaring").show();

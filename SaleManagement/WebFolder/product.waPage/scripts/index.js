@@ -2,16 +2,11 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var txt_bar_code = {};	// @textField
-	var txt_supplier_code = {};	// @textField
-	var txt_ancient_times = {};	// @textField
-	var txt_unit_price = {};	// @textField
-	var txt_unit = {};	// @textField
-	var txt_product_name = {};	// @textField
+	var txtProductName = {};	// @textField
 	var productDataGrid = {};	// @dataGrid
 	var btnSubselected = {};	// @button
 	var btnShowall = {};	// @button
-	var txt_product_code = {};	// @textField
+	var txtProductCode = {};	// @textField
 	var btnCreate = {};	// @button
 	var txtPostcode = {};	// @textField
 	var txtempName = {};	// @textField
@@ -28,52 +23,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // eventHandlers// @lock
 
-	txt_bar_code.keydown = function txt_bar_code_keydown (event)// @startlock
+	txtProductName.keydown = function txtProductName_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txt_unit").focus();
+			$$("txt_product_name").focus();
 		}
-		
-	};// @lock
-
-	txt_supplier_code.keydown = function txt_supplier_code_keydown (event)// @startlock
-	{// @endlock
-		if(event.keyCode == 13){
-			$$("txt_product_code").focus();
-		}
-		
-	};// @lock
-
-	txt_ancient_times.keydown = function txt_ancient_times_keydown (event)// @startlock
-	{// @endlock
-		if(event.keyCode == 13){
-			$$("txt_supplier_code").focus();
-		}
-		
-	};// @lock
-
-	txt_unit_price.keydown = function txt_unit_price_keydown (event)// @startlock
-	{// @endlock
-		if(event.keyCode == 13){
-			$$("txt_ancient_times").focus();
-		}
-		
-	};// @lock
-
-	txt_unit.keydown = function txt_unit_keydown (event)// @startlock
-	{// @endlock
-		if(event.keyCode == 13){
-			$$("txt_unit_price").focus();
-		}
-		
-	};// @lock
-
-	txt_product_name.keydown = function txt_product_name_keydown (event)// @startlock
-	{// @endlock
-		if(event.keyCode == 13){
-			$$("txt_bar_code").focus();
-		}
-		
 	};// @lock
 
 	productDataGrid.onRowDblClick = function productDataGrid_onRowDblClick (event)// @startlock
@@ -105,7 +59,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		sources.product.allEntities({ keepOrderBy: true } );
 	};// @lock
 
-	txt_product_code.keydown = function txt_product_code_keydown (event)// @startlock
+	txtProductCode.keydown = function txtProductCode_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
 			$$("txt_product_name").focus();
@@ -314,16 +268,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("txt_bar_code", "keydown", txt_bar_code.keydown, "WAF");
-	WAF.addListener("txt_supplier_code", "keydown", txt_supplier_code.keydown, "WAF");
-	WAF.addListener("txt_ancient_times", "keydown", txt_ancient_times.keydown, "WAF");
-	WAF.addListener("txt_unit_price", "keydown", txt_unit_price.keydown, "WAF");
-	WAF.addListener("txt_unit", "keydown", txt_unit.keydown, "WAF");
-	WAF.addListener("txt_product_name", "keydown", txt_product_name.keydown, "WAF");
+	WAF.addListener("txtProductName", "keydown", txtProductName.keydown, "WAF");
 	WAF.addListener("productDataGrid", "onRowDblClick", productDataGrid.onRowDblClick, "WAF");
 	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");
 	WAF.addListener("btnShowall", "click", btnShowall.click, "WAF");
-	WAF.addListener("txt_product_code", "keydown", txt_product_code.keydown, "WAF");
+	WAF.addListener("txtProductCode", "keydown", txtProductCode.keydown, "WAF");
 	WAF.addListener("btnCreate", "click", btnCreate.click, "WAF");
 	WAF.addListener("txtPostcode", "keydown", txtPostcode.keydown, "WAF");
 	WAF.addListener("txtempName", "keydown", txtempName.keydown, "WAF");

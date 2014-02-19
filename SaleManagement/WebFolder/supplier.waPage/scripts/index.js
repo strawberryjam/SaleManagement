@@ -311,21 +311,26 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSDel.click = function icoSDel_click (event)// @startlock
 	{// @endlock
-		var selection = sources.supplier.getSelection();
-		var numSel = selection.countSelected();
-		if (numSel > 0) {
-		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
-		        if (flag) {
-		            var posArr = selection.getSelectedRows();
-		            WAF.sources.supplier.delSelected({
-		                onSuccess: function(evt) {
-		                    WAF.sources.supplier.setEntityCollection(evt.result);
-		                }
-		            }, posArr);
-		        }
-
-		    });
+		var isNew = sources.supplier.isNewElement();
+		if (isNew) {
+		    return false;
 		}
+		else {
+			jConfirm("本当にこのレコードを削除してよろしいですか。?","確認",function(flag){
+				if(flag){
+					sources.supplier.removeCurrent({
+				        onSuccess: function(event) {
+				        	
+					        //Close Input
+							$$("supcontainer").selectTab(1);
+				        },
+				        onError: function(error) {
+				        	jAlert(error['error'][0].message,"アラート");
+				        }
+				    });
+				}
+			});
+		}sss
 	};// @lock
 
 	icoSSave.click = function icoSSave_click (event)// @startlock

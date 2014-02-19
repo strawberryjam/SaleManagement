@@ -4,23 +4,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="generator" content="Wakanda GUIDesigner"/>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-        <meta name="WAF.catalog" content="Supplier,Employee,Product"/>
+        <meta name="WAF.catalog" content="Supplier,Product"/>
         <meta name="WAF.packageJson"/>
     	<meta name="wakanda-version" content="7 build 7.152232"/>
 		<meta name="wakanda-build" content="7.152232"/>
 		
 		
 
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Product" data-lib="WAF" data-id="product" data-dataType="string" data-autoLoad="true" content="product"/>
-
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Employee" data-lib="WAF" data-id="employee" data-dataType="string" data-autoLoad="true" content="employee"/>		<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
+				<meta name="WAF.config.loadJS" id="waf-script" content="scripts/index.js"/>
 		<meta name="WAF.config.loadJS" content="/script/alert/jquery.alerts.js"/>
 		<meta name="WAF.config.loadCSS" id="waf-interface-css" content="styles/index.css"/>
 		<meta name="WAF.config.loadCSS" id="waf-project-css" content="/application.css"/>
 		<meta name="WAF.config.loadCSS" content="/script/alert/jquery.alerts.css"/>
-<meta name="WAF.config.rpc.file" content="/rpc-proxy/Product?namespace=productModule"/>
 
-		<meta name="WAF.config.datasources" data-type="dataSource" data-source-type="dataClass" data-source="Product" data-lib="WAF" data-id="product" data-dataType="string" data-autoLoad="true" content="product"/></head>
+		<meta data-type="dataSource" data-lib="WAF" data-source="Product" data-source-type="dataClass" data-dataType="string" data-autoLoad="true" name="WAF.config.datasources" data-id="product" content="product"/></head>
     <body id="waf-body" data-workspace-width="0" data-workspace-orientation="portrait" data-workspace-height="0" data-viewport-width="device-width" data-viewport-minimum-scale="1.0" data-viewport-maximum-scale="1.0" data-viewport-initial-scale="1.0" data-type="document" data-theme="default" data-platform="desktop" data-lib="WAF" data-group="[['productcontainer','productmenu','productoutput','productinput']]" data-entire-model="false" data-apple-meta-tags-status-bar="default" style="bottom:NaNpx;right:NaNpx;visibility:hidden;">
     	<div id="productcontainer" data-type="tabView" data-padding="5" data-menu-position="top left" data-linked-tag="productmenu,productoutput,productinput" data-lib="WAF" data-constraint-top="true" data-constraint-left="true" data-closable-tabs="false" class="waf-widget waf-tabView ">
 	 	<ul id="productmenu" data-type="menuBar" data-tab-margin="5" data-subMenuShow="hover" data-linked-tag="productcontainer" data-lib="WAF" data-level="0" data-hideonload="true" data-display="horizontal" data-context="['protected']" data-constraint-top="true" data-constraint-right="true" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-menuBar waf-tabView-menuBar waf-tabView-menuBar-top-left">
@@ -43,7 +40,7 @@
  	 		<div id="TopContainer" data-type="container" data-lib="WAF" data-label-position="top" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-container waf-container-level-1 waf-level-1">
 	 	 	 	<div id="rtxtOTitle" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="true" class="waf-widget waf-richText ">商品一覧</div>
  	 	 	</div>
- 	 		<div id="productDataGrid" data-type="dataGrid" data-selection-mode="multiple" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-footer-text="item(s)" data-footer-hide="true" data-display-error="true" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-column="[{'sourceAttID':'product_code','colID':'product_code','width':'100','title':'%u5546%u54C1%u30B3%u30FC%u30C9'},{'sourceAttID':'product_name','colID':'product_name','width':'180','title':'%u5546%u54C1%u540D'},{'sourceAttID':'unit','colID':'unit','width':'150','title':'%u5358%u4F4D'},{'sourceAttID':'unit_price','colID':'unit_price','width':'150','title':'%u5358%u4FA1'},{'sourceAttID':'image','colID':'image','width':'150','title':'%u4E0A%u4EE3'}]" data-binding="product" class="waf-widget waf-dataGrid "></div>
+ 	 		<div id="productDataGrid" data-type="dataGrid" data-selection-mode="multiple" data-readOnly="true" data-lib="WAF" data-label-position="top" data-label="" data-footer-text="item(s)" data-footer-hide="true" data-display-error="true" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-column="[{'sourceAttID':'ProductCode','colID':'ProductCode','width':'121','title':'%u5546%u54C1%u30B3%u30FC%u30C9'},{'sourceAttID':'ProductName','colID':'ProductName','width':'226','title':'%u5546%u54C1%u540D'},{'sourceAttID':'UnitPrice','colID':'UnitPrice','width':'180','title':'%u5358%u4FA1'},{'sourceAttID':'SalePrice','colID':'SalePrice','width':'202','title':'%u4E0A%u4EE3'}]" class="waf-widget waf-dataGrid " data-binding="product"></div>
  	 		<button id="btnShowall" data-type="button" data-text="全件表示 " data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button "></button>
  	 		<button id="btnSubselected" data-type="button" data-text="一部表示 " data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button "></button>
  	 		<button id="btnSearch" data-type="button" data-text="検　索" data-target="_blank" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-action="simple" class="waf-widget waf-button "></button>
@@ -67,31 +64,11 @@
  	 		
  	 			
  	 			
- 	 		<input value="[product.product_code]" type="text" id="txt_product_code" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="商品コード" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.product_code" class="waf-widget waf-textField "/>
- 	 		<label id="label3" for="txt_product_code" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">商品コード</label>
- 	 	
- 	 		<input type="text" id="txt_product_name" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="商品名" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.product_name" class="waf-widget waf-textField "/>
- 	 		<label id="label4" for="txt_product_name" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">商品名</label>
- 	 	
- 	 		<input type="text" id="txt_bar_code" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="バーコード" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.bar_code" class="waf-widget waf-textField "/>
- 	 		<label id="label5" for="txt_bar_code" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">バーコード</label>
- 	 	
- 	 		<input type="text" id="txt_unit" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="単位" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.unit" class="waf-widget waf-textField "/>
- 	 		<label id="label6" for="txt_unit" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">単位</label>
- 	 	
- 	 		<input type="text" id="txt_unit_price" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="下代" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.unit_price" class="waf-widget waf-textField "/>
- 	 		<label id="label7" for="txt_unit_price" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">下代</label>
- 	 	
- 	 		<input type="text" id="txt_ancient_times" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="上代" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.ancient_times" class="waf-widget waf-textField "/>
- 	 		<label id="label8" for="txt_ancient_times" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">上代</label>
- 	 	
- 	 		<input type="text" id="txt_supplier_code" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="仕入先" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-binding="product.supplier_code" class="waf-widget waf-textField "/>
- 	 		<label id="label9" for="txt_supplier_code" data-valign="middle" data-type="label" data-margin="5" data-lib="WAF" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-label waf-label-textField">仕入先</label>
- 	 	
- 	 			<input id="txt_supplier_name" data-type="textField" data-lib="WAF" type="text" class="waf-widget waf-textField " data-label="" data-label-position="left" data-multiline="false" data-readOnly="true" data-password="false" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-left="true" data-constraint-top="true" data-constraint-bottom="false" data-constraint-right="false"/>
- 	 		</div>
+ 	 		<input type="text" id="txtProductCode" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField " data-binding="product.ProductCode"/>
+ 	 			<div id="rtxtProductCode" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="true" class="waf-widget waf-richText ">仕入先コード</div>
+ 	 		<input type="text" id="txtProductName" data-type="textField" data-readOnly="false" data-password="false" data-multiline="false" data-lib="WAF" data-label-position="left" data-label="" data-datapicker-on="true" data-datapicker-icon-only="false" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" class="waf-widget waf-textField " data-binding="product.ProductName"/>
+ 	 		<div id="rtxtProductName" data-type="richText" data-target="_blank" data-plainText="true" data-overflow="Hidden" data-lib="WAF" data-label-position="left" data-label="" data-constraint-top="true" data-constraint-right="false" data-constraint-left="true" data-constraint-bottom="false" data-autoWidth="true" class="waf-widget waf-richText ">商品名</div>
+ 	 	</div>
  				</div>
-		
-		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script>
-	</body>
+		<script type="text/javascript" src="/waLib/WAF/Loader.js"></script></body>
 </html>
