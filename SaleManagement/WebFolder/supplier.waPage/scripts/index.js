@@ -64,7 +64,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		WAF.directory.logout({
 		    onSuccess: function(event) {
-		        location.reload();
+		        window.location.href = "/index/";
 		    },
 		    onError: function(error) {
 		        jAlert(error['error'][0].message,"アラート");
