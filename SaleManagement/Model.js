@@ -9,3 +9,4 @@ include("./Model/Setting/Setting-methods.js");
 include("./Model/Shop/Shop-methods.js");
 
 include("./Model/Product/Product-methods.js");
+include("./Model/Customer/Customer-methods.js");

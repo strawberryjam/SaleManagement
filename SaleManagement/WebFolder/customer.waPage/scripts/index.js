@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var txtDiscount = {};	// @textField
 	var txtFirstPayMoney = {};	// @textField
 	var txtFax = {};	// @textField
 	var txtLastPaydate = {};	// @textField
@@ -21,17 +22,51 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var icoSPrev = {};	// @icon
 	var icoSFirst = {};	// @icon
 	var txtSupName = {};	// @textField
-	var txtSupCode = {};	// @textField
+	var txtCusCode = {};	// @textField
 	var btnDelete = {};	// @button
 	var btnCreate = {};	// @button
 	var btnSearch = {};	// @button
 	var btnSubselected = {};	// @button
 	var btnShowall = {};	// @button
-	var SupDataGrid = {};	// @dataGrid
+	var CusDataGrid = {};	// @dataGrid
 	var btnLogout = {};	// @button
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	txtDiscount.keydown = function txtDiscount_keydown (event)// @startlock
+	{// @endlock
+		if(event.keyCode == 13){
+			var seq = $.trim($$("txtCusCode").getValue());
+			if(seq!=""){
+				var isNew = sources.customer.isNewElement();
+				sources.customer.save({
+			        onSuccess: function(event) {
+			        	if(isNew){
+			        		jAlert("保存しました。","アラート",function(){
+			        			//Cap nhat datasource cho customer
+								sources.customer.addEntity(sources.customer.getCurrentElement());
+								
+								//New Entity
+								sources.customer.newEntity();
+								
+								//Set focus cho input
+								$$("txtCusCode").focus();
+			        		});
+				        }else{
+				        	//Close Input
+							$$("cuscontainer").selectTab(1);
+				        }
+			        },
+			        onError: function(error) {
+			        	jAlert(error['error'][0].message,"アラート");
+			        }
+			    });
+			}else{
+				$$("txtCusCode").focus();
+			}
+		}
+	};// @lock
 
 	txtFirstPayMoney.keydown = function txtFirstPayMoney_keydown (event)// @startlock
 	{// @endlock
@@ -64,35 +99,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	txtBankInfo.keydown = function txtBankInfo_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			var seq = $.trim($$("txtSupCode").getValue());
-			if(seq!=""){
-				var isNew = sources.supplier.isNewElement();
-				sources.supplier.save({
-			        onSuccess: function(event) {
-			        	if(isNew){
-			        		jAlert("保存しました。","アラート",function(){
-			        			//Cap nhat datasource cho customer
-								sources.supplier.addEntity(sources.supplier.getCurrentElement());
-								
-								//New Entity
-								sources.supplier.newEntity();
-								
-								//Set focus cho input
-								$$("txtSupCode").focus();
-			        		});
-				        }else{
-				        	//Close Input
-							$$("supcontainer").selectTab(1);
-				        }
-			        },
-			        onError: function(error) {
-			        	jAlert(error['error'][0].message,"アラート");
-			        }
-			    });
-			}else{
-				$$("txtSupCode").focus();
-			}
+			$$("txtFurigana").focus();
 		}
+		
 	};// @lock
 
 	txtEmail.keydown = function txtEmail_keydown (event)// @startlock
@@ -140,28 +149,28 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSClose.click = function icoSClose_click (event)// @startlock
 	{// @endlock
 		//Close Input
-		$$("supcontainer").selectTab(1);
+		$$("cuscontainer").selectTab(1);
 	};// @lock
 
 	icoSSave.click = function icoSSave_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
-		sources.supplier.save({
+		var isNew = sources.customer.isNewElement();
+		sources.customer.save({
 	        onSuccess: function(event) {
 	        	if(isNew){
 	        		jAlert("保存しました。","アラート",function(){
-	        			//Cap nhat datasource cho supplier
-						sources.supplier.addEntity(sources.supplier.getCurrentElement());
+	        			//Cap nhat datasource cho customer
+						sources.customer.addEntity(sources.customer.getCurrentElement());
 						
 						//New Entity
-						sources.supplier.newEntity();
+						sources.customer.newEntity();
 						
 						//Set focus cho input
-						$$("txtSupCode").focus();
+						$$("txtCusCode").focus();
 	        		});
 		        }else{
 		        	//Close Input
-					$$("supcontainer").selectTab(1);
+					$$("cuscontainer").selectTab(1);
 		        }
 	        },
 	        onError: function(error) {
@@ -172,18 +181,18 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSDel.click = function icoSDel_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
+		var isNew = sources.customer.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
 			jConfirm("本当にこのレコードを削除してよろしいですか。?","確認",function(flag){
 				if(flag){
-					sources.supplier.removeCurrent({
+					sources.customer.removeCurrent({
 				        onSuccess: function(event) {
 				        	
 					        //Close Input
-							$$("supcontainer").selectTab(1);
+							$$("cuscontainer").selectTab(1);
 				        },
 				        onError: function(error) {
 				        	jAlert(error['error'][0].message,"アラート");
@@ -196,16 +205,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSLast.click = function icoSLast_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
+		var isNew = sources.customer.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-		    sources.supplier.save({
+		    sources.customer.save({
 		        onSuccess: function(event) {
-		            var last = sources.supplier.length;
+		            var last = sources.customer.length;
 		            if (last > 1) {
-		                sources.supplier.select(last - 1, {
+		                sources.customer.select(last - 1, {
 		                    onError: function(error) {
 		                        jAlert(error['error'][0].message,"アラート");
 		                    }
@@ -221,14 +230,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSNext.click = function icoSNext_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
+		var isNew = sources.customer.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.supplier.save({
+			sources.customer.save({
 		        onSuccess: function(event) {
-		        	sources.supplier.selectNext();
+		        	sources.customer.selectNext();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -239,14 +248,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSPrev.click = function icoSPrev_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
+		var isNew = sources.customer.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.supplier.save({
+			sources.customer.save({
 		        onSuccess: function(event) {
-		        	sources.supplier.selectPrevious();
+		        	sources.customer.selectPrevious();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -257,14 +266,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSFirst.click = function icoSFirst_click (event)// @startlock
 	{// @endlock
-		var isNew = sources.supplier.isNewElement();
+		var isNew = sources.customer.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.supplier.save({
+			sources.customer.save({
 		        onSuccess: function(event) {
-		        	sources.supplier.select(0,
+		        	sources.customer.select(0,
 		        	{
 				        onError: function(error) {
 				        	jAlert(error['error'][0].message,"アラート");
@@ -285,24 +294,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 	};// @lock
 
-	txtSupCode.keydown = function txtSupCode_keydown (event)// @startlock
+	txtCusCode.keydown = function txtCusCode_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtSupName").focus();
+			$$("txtCusName").focus();
 		}
 	};// @lock
 
 	btnDelete.click = function btnDelete_click (event)// @startlock
 	{// @endlock
-		var selection = sources.supplier.getSelection();
+		var selection = sources.customer.getSelection();
 		var numSel = selection.countSelected();
 		if (numSel > 0) {
 		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
 		        if (flag) {
 		            var posArr = selection.getSelectedRows();
-		            WAF.sources.supplier.delSelected({
+		            WAF.sources.customer.delSelected({
 		                onSuccess: function(evt) {
-		                    WAF.sources.supplier.setEntityCollection(evt.result);
+		                    WAF.sources.customer.setEntityCollection(evt.result);
 		                }
 		            }, posArr);
 		        }
@@ -313,16 +322,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnCreate.click = function btnCreate_click (event)// @startlock
 	{// @endlock
 		//New Entity
-		sources.supplier.newEntity();
+		sources.customer.newEntity();
 		
 		//Show Input
-		$$("supcontainer").selectTab(2);
+		$$("cuscontainer").selectTab(2);
 		
 		//Remove readonly cho input
-		$$("txtSupCode").setReadOnly(false);
+		$$("txtCusCode").setReadOnly(false);
 		
 		//Set focus cho input
-		$$("txtSupCode").focus();
+		$$("txtCusCode").focus();
 	};// @lock
 
 	btnSearch.click = function btnSearch_click (event)// @startlock
@@ -335,25 +344,25 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		function buildSelection(event)
      	{
      		var collec = event.entityCollection;
-         	sources.supplier.setEntityCollection(collec);
+         	sources.customer.setEntityCollection(collec);
      	}
-     	var selection = sources.supplier.getSelection();
-  		var collection = sources.supplier.getEntityCollection();
+     	var selection = sources.customer.getSelection();
+  		var collection = sources.customer.getEntityCollection();
         collection.buildFromSelection(selection, { onSuccess: buildSelection });
 	};// @lock
 
 	btnShowall.click = function btnShowall_click (event)// @startlock
 	{// @endlock
-		sources.supplier.allEntities({ keepOrderBy: true } );
+		sources.customer.allEntities({ keepOrderBy: true } );
 	};// @lock
 
-	SupDataGrid.onRowDblClick = function SupDataGrid_onRowDblClick (event)// @startlock
+	CusDataGrid.onRowDblClick = function CusDataGrid_onRowDblClick (event)// @startlock
 	{// @endlock
 		//Show Input
-		$$("supcontainer").selectTab(2);
+		$$("cuscontainer").selectTab(2);
 		
 		//Set readonly cho input
-		$$("txtSupCode").setReadOnly(true);
+		$$("txtCusCode").setReadOnly(true);
 		
 		//Set focus cho input
 		$$("txtSupName").focus();
@@ -372,6 +381,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("txtDiscount", "keydown", txtDiscount.keydown, "WAF");
 	WAF.addListener("txtFirstPayMoney", "keydown", txtFirstPayMoney.keydown, "WAF");
 	WAF.addListener("txtFax", "keydown", txtFax.keydown, "WAF");
 	WAF.addListener("txtLastPaydate", "keydown", txtLastPaydate.keydown, "WAF");
@@ -391,13 +401,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("icoSPrev", "click", icoSPrev.click, "WAF");
 	WAF.addListener("icoSFirst", "click", icoSFirst.click, "WAF");
 	WAF.addListener("txtSupName", "keydown", txtSupName.keydown, "WAF");
-	WAF.addListener("txtSupCode", "keydown", txtSupCode.keydown, "WAF");
+	WAF.addListener("txtCusCode", "keydown", txtCusCode.keydown, "WAF");
 	WAF.addListener("btnDelete", "click", btnDelete.click, "WAF");
 	WAF.addListener("btnCreate", "click", btnCreate.click, "WAF");
 	WAF.addListener("btnSearch", "click", btnSearch.click, "WAF");
 	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");
 	WAF.addListener("btnShowall", "click", btnShowall.click, "WAF");
-	WAF.addListener("SupDataGrid", "onRowDblClick", SupDataGrid.onRowDblClick, "WAF");
+	WAF.addListener("CusDataGrid", "onRowDblClick", CusDataGrid.onRowDblClick, "WAF");
 	WAF.addListener("btnLogout", "click", btnLogout.click, "WAF");
 // @endregion
 };// @endlock

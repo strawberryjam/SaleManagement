@@ -3,221 +3,11 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
-#richText17 {
-	 z-index: 119;
-	 width: 75px;
-	 height: 18px;
-	 top: 211px;
-	 left: 452px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText7 {
-	 z-index: 118;
-	 width: 75px;
-	 height: 18px;
-	 top: 427px;
-	 left: 440px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText6 {
-	 z-index: 117;
-	 width: 30px;
-	 height: 18px;
-	 top: 427px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText5 {
-	 z-index: 116;
-	 width: 45px;
-	 height: 18px;
-	 top: 427px;
-	 left: 257px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText3 {
-	 z-index: 110;
-	 width: 33px;
-	 height: 18px;
-	 top: 298px;
-	 left: 456px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText16 {
-	 z-index: 108;
-	 width: 55px;
-	 height: 18px;
-	 top: 169px;
-	 left: 452px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText15 {
-	 z-index: 106;
-	 width: 60px;
-	 height: 18px;
-	 top: 126px;
-	 left: 452px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText14 {
-	 z-index: 104;
-	 width: 45px;
-	 height: 18px;
-	 top: 475px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
 #richText13 {
 	 z-index: 102;
 	 width: 44px;
 	 height: 18px;
 	 top: 384px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText12 {
-	 z-index: 100;
-	 width: 45px;
-	 height: 18px;
-	 top: 341px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText11 {
-	 z-index: 98;
-	 width: 30px;
-	 height: 18px;
-	 top: 298px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText10 {
-	 z-index: 96;
-	 width: 30px;
-	 height: 18px;
-	 top: 255px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText9 {
-	 z-index: 94;
-	 width: 15px;
-	 height: 20px;
-	 top: 211px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText8 {
-	 z-index: 92;
-	 width: 55px;
-	 height: 18px;
-	 top: 169px;
-	 left: 14px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 color: rgb(255, 255, 255);
-	 font-size: 15px;
-	 font-weight: bold;
-	 
-}
-
-#richText4 {
-	 z-index: 4;
-	 width: 60px;
-	 height: 18px;
-	 top: 126px;
 	 left: 14px;
 	
 	 position: absolute;
@@ -1220,6 +1010,216 @@
 	 border-right-color: rgb(255, 127, 0);
 	 border-left-color: rgb(255, 127, 0);
 	 border-top-color: rgb(255, 127, 0);
+	 
+}
+
+#rtxtLastPaydate {
+	 z-index: 108;
+	 width: 75px;
+	 height: 18px;
+	 top: 169px;
+	 left: 452px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtFax {
+	 z-index: 110;
+	 width: 33px;
+	 height: 18px;
+	 top: 298px;
+	 left: 456px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtFirstPayMoney {
+	 z-index: 119;
+	 width: 75px;
+	 height: 18px;
+	 top: 211px;
+	 left: 452px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtInitBalance {
+	 z-index: 106;
+	 width: 60px;
+	 height: 18px;
+	 top: 126px;
+	 left: 452px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtTaxCalculation {
+	 z-index: 118;
+	 width: 75px;
+	 height: 18px;
+	 top: 427px;
+	 left: 440px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtPaymentDate {
+	 z-index: 116;
+	 width: 45px;
+	 height: 18px;
+	 top: 427px;
+	 left: 257px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtClosingDate {
+	 z-index: 117;
+	 width: 30px;
+	 height: 18px;
+	 top: 427px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtBankInfo {
+	 z-index: 104;
+	 width: 45px;
+	 height: 18px;
+	 top: 475px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtEmpCode {
+	 z-index: 100;
+	 width: 45px;
+	 height: 18px;
+	 top: 341px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtTel {
+	 z-index: 98;
+	 width: 30px;
+	 height: 18px;
+	 top: 298px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtAddress {
+	 z-index: 96;
+	 width: 30px;
+	 height: 18px;
+	 top: 255px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtPostCode {
+	 z-index: 94;
+	 width: 15px;
+	 height: 20px;
+	 top: 211px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtFurigana {
+	 z-index: 92;
+	 width: 55px;
+	 height: 18px;
+	 top: 169px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
+	 
+}
+
+#rtxtSupName {
+	 z-index: 4;
+	 width: 60px;
+	 height: 18px;
+	 top: 126px;
+	 left: 14px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 color: rgb(255, 255, 255);
+	 font-size: 15px;
+	 font-weight: bold;
 	 
 }
 
