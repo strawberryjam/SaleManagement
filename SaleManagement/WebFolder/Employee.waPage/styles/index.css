@@ -5,9 +5,9 @@
 
 #label5 {
 	 z-index: 8;
-	 width: 108px;
-	 height: 13px;
-	 top: 18.5px;
+	 width: 95px;
+	 height: 16px;
+	 top: 17px;
 	 left: 41px;
 	
 	 position: absolute;
@@ -297,6 +297,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -311,6 +312,7 @@
 	 min-width: 75px;
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -325,6 +327,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -339,6 +342,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -353,6 +357,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -367,6 +372,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -995,7 +1001,7 @@
 	 border-left-color: rgb(153, 153, 153);
 	 border-right-color: rgb(153, 153, 153);
 	 border-bottom-color: rgb(153, 153, 153);
-	 background-image: url('/images/bgrWood.jpg');
+	 background-image: url('/images/fbackground.jpg');
 	 background-repeat: repeat;
 	 
 }
@@ -1008,7 +1014,7 @@
 	 right: 5px;
 	
 	 position: absolute;
-	 background-image: url('/images/bgrWood.jpg');
+	 background-image: url('/images/fbackground.jpg');
 	 
 }
 
@@ -1023,6 +1029,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
@@ -1037,6 +1044,7 @@
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 15px;
 	 min-width: 85px;
+	 color: rgb(255, 255, 255);
 	 
 }
 
