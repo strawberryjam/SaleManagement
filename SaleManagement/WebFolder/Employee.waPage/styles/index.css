@@ -5,32 +5,10 @@
 
 #label5 {
 	 z-index: 8;
-	 width: 95px;
-	 height: 16px;
-	 top: 17px;
+	 width: 101px;
+	 height: 13px;
+	 top: 18.5px;
 	 left: 41px;
-	
-	 position: absolute;
-	 
-}
-
-#button11 {
-	 z-index: 2;
-	 width: 60px;
-	 height: 20px;
-	 top: 2px;
-	 right: 8px;
-	
-	 position: absolute;
-	 
-}
-
-#button10 {
-	 z-index: 1;
-	 width: 60px;
-	 height: 20px;
-	 top: 2px;
-	 right: 73px;
 	
 	 position: absolute;
 	 
@@ -1273,17 +1251,6 @@
 	 
 }
 
-#chxSearchOnSelection {
-	 z-index: 8;
-	 width: 16px;
-	 height: 16px;
-	 top: 17px;
-	 left: 20px;
-	
-	 position: absolute;
-	 
-}
-
 #rtxTitle {
 	 z-index: -1;
 	 height: 14px;
@@ -1514,18 +1481,6 @@
 	 
 }
 
-#cbxAndOr {
-	 z-index: 1;
-	 width: 87px;
-	 height: 24px;
-	 top: 2px;
-	 left: 8px;
-	
-	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
 #cbxAndOr_3 {
 	 z-index: 1;
 	 width: 87px;
@@ -1534,19 +1489,6 @@
 	 left: 8px;
 	
 	 position: absolute;
-	 font-family: Verdana, Geneva, sans-serif;
-	 
-}
-
-#txtValueSearch_3ssss {
-	 z-index: 3;
-	 width: 157px;
-	 height: 24px;
-	 top: 34px;
-	 left: 186px;
-	
-	 position: absolute;
-	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
 	 
 }
@@ -1563,7 +1505,42 @@
 	 
 }
 
-#txtValueSearch_2s {
+#cbxExact_2 {
+	 z-index: 4;
+	 width: 123px;
+	 height: 24px;
+	 top: 34px;
+	 left: 358px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#chxSearchOnAllData {
+	 z-index: 8;
+	 width: 16px;
+	 height: 16px;
+	 top: 17px;
+	 left: 20px;
+	
+	 position: absolute;
+	 
+}
+
+#cbxAndOr_4 {
+	 z-index: 1;
+	 width: 87px;
+	 height: 24px;
+	 top: 2px;
+	 left: 8px;
+	
+	 position: absolute;
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#txtValueSearch_2 {
 	 z-index: 3;
 	 width: 157px;
 	 height: 24px;
@@ -1576,15 +1553,71 @@
 	 
 }
 
-#cbxExact_2 {
-	 z-index: 4;
-	 width: 123px;
+#txtValueSearch_3 {
+	 z-index: 3;
+	 width: 157px;
 	 height: 24px;
 	 top: 34px;
-	 left: 358px;
+	 left: 186px;
 	
 	 position: absolute;
+	 font-size: 12px;
 	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+#btnAddSearch {
+	 z-index: 4;
+	 width: 92px;
+	 height: 22px;
+	 top: 371px;
+	 left: 23px;
+	
+	 position: absolute;
+	 
+}
+
+#btnClearSearch {
+	 z-index: 5;
+	 width: 92px;
+	 height: 22px;
+	 top: 371px;
+	 left: 137px;
+	
+	 position: absolute;
+	 
+}
+
+#txtTest {
+	 z-index: 9;
+	 width: 292px;
+	 height: 22px;
+	 top: 12px;
+	 left: 201px;
+	
+	 position: absolute;
+	 
+}
+
+#btnCancel {
+	 z-index: 1;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 73px;
+	
+	 position: absolute;
+	 
+}
+
+#btnOK {
+	 z-index: 2;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 8px;
+	
+	 position: absolute;
 	 
 }
 

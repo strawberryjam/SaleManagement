@@ -17,14 +17,16 @@
 	return this;
 }
 
-
+var GlobalQuery="";
 
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnClearSearch = {};	// @button
+	var btnAddSearch = {};	// @button
 	var btnSearch = {};	// @button
-	var button11 = {};	// @button
-	var button10 = {};	// @button
+	var btnOK = {};	// @button
+	var btnCancel = {};	// @button
 	var btnDel = {};	// @button
 	var btnSubSelect = {};	// @button
 	var btnShowAll = {};	// @button
@@ -48,6 +50,36 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // eventHandlers// @lock
 
+	btnClearSearch.click = function btnClearSearch_click (event)// @startlock
+	{// @endlock
+		// Add your code here
+		var count,nameSelector;
+		// Add your code here
+		for(count=4;count>0;count--){
+			nameSelector='ctnSearch'+'_'+count;
+			if($$(nameSelector).isVisible()==true)
+			{
+				$$(nameSelector).hide();
+				break;
+			}
+		}
+	};// @lock
+
+	btnAddSearch.click = function btnAddSearch_click (event)// @startlock
+	{// @endlock
+		var count,nameSelector;
+		// Add your code here
+		for(count=1;count<5;count++){
+			nameSelector='ctnSearch'+'_'+count;
+			if($$(nameSelector).isVisible()==false)
+			{
+				$$(nameSelector).show();
+				break;
+			}
+		}
+		
+	};// @lock
+
 	btnSearch.click = function btnSearch_click (event)// @startlock
 	{// @endlock
 		// Add your code here
@@ -55,14 +87,72 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$('dlgSearch').displayDialog();
 	};// @lock
 
-	button11.click = function button11_click (event)// @startlock
+	btnOK.click = function btnOK_click (event)// @startlock
 	{// @endlock
-		$$('dialog1').closeDialog(); //ok button
+		var destSet,nameExact;
+		//$$('dialog1').closeDialog(); //ok button
+		var exact=$$('cbxExact').getValue();
+		var valSearch="*"+$$('txtValueSearch').getValue()+"*";
+		
+		if(exact=="Exact"){
+			valSearch=$$('txtValueSearch').getValue();
+		}
+		var fieldSearch= $$('cbxFieldName').getValue();
+		stringQuery=fieldSearch+' = '+'"'+valSearch+'"';
+		
+		//Duyet
+		for(count=1;count<5;count++)
+		{
+			
+			nameContainer='ctnSearch'+'_'+count;
+			if($$(nameContainer).isVisible()==true)
+			{
+				
+				//paramsCount=count+1;
+				
+				nameAndOr='cbxAndOr'+'_'+count;
+				nameFieldSearch='cbxFieldName'+'_'+count;
+				nameValueSearch='txtValueSearch'+'_'+count;
+				nameExact='cbxExact'+'_'+count;
+				numExact=$$(nameExact).getValue();
+				var valSearchn="*"+$$(nameValueSearch).getValue()+"*";
+				if(numExact=="Exact")
+				{
+					valSearchn=$$(nameValueSearch).getValue();
+				}
+				
+				//valSearchn=$$(nameValueSearch).getValue();
+				
+				stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+' = '+'"'+valSearchn+'"';
+			}
+			
+			
+		}
+		
+		$$('txtTest').setValue(stringQuery);
+		if($$('chxSearchOnAllData').getValue()==true){
+			if(GlobalQuery==""){
+				GlobalQuery=stringQuery;
+			}else{
+				GlobalQuery=GlobalQuery +" OR "+ stringQuery;
+			}	
+			
+			$$('txtTest').setValue(GlobalQuery);
+			sources.employee.query(GlobalQuery);
+
+//        	}
+
+		}else{
+			sources.employee.filterQuery(stringQuery);
+			GlobalQuery=stringQuery;
+			//$$('txtTest').setValue(GlobalQuery);
+		}
+	    //GlobalQuery=GlobalQuery+" OR "+stringQuery;
 	};// @lock
 
-	button10.click = function button10_click (event)// @startlock
+	btnCancel.click = function btnCancel_click (event)// @startlock
 	{// @endlock
-		$$('dialog1').closeDialog(); //cancel button
+		$$('dlgSearch').closeDialog(); //cancel button
 	};// @lock
 
 	btnDel.click = function btnDel_click (event)// @startlock
@@ -101,6 +191,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		// Add your code here
 		sources.employee.allEntities({ keepOrderBy: true } );
+		GlobalQuery="";
 	};// @lock
 
 	empDataGrid.onRowDblClick = function empDataGrid_onRowDblClick (event)// @startlock
@@ -360,9 +451,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnClearSearch", "click", btnClearSearch.click, "WAF");
+	WAF.addListener("btnAddSearch", "click", btnAddSearch.click, "WAF");
 	WAF.addListener("btnSearch", "click", btnSearch.click, "WAF");
-	WAF.addListener("button11", "click", button11.click, "WAF");
-	WAF.addListener("button10", "click", button10.click, "WAF");
+	WAF.addListener("btnOK", "click", btnOK.click, "WAF");
+	WAF.addListener("btnCancel", "click", btnCancel.click, "WAF");
 	WAF.addListener("btnDel", "click", btnDel.click, "WAF");
 	WAF.addListener("btnSubSelect", "click", btnSubSelect.click, "WAF");
 	WAF.addListener("btnShowAll", "click", btnShowAll.click, "WAF");
