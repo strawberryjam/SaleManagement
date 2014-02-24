@@ -361,12 +361,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			}	
 			
 			$$('txtTest').setValue(GlobalQuery);
-			sources.employee.query(GlobalQuery);
+			sources.paymentOut.query(GlobalQuery);
 
 //        	}
 
 		}else{
-			sources.employee.filterQuery(stringQuery);
+			sources.paymentOut.filterQuery(stringQuery);
 			GlobalQuery=stringQuery;
 			//$$('txtTest').setValue(GlobalQuery);
 		}
@@ -381,15 +381,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnDel.click = function btnDel_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var selection = sources.employee.getSelection();
+		var selection = sources.paymentOut.getSelection();
 		var numSel = selection.countSelected();
 		if (numSel > 0) {
 		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
 		        if (flag) {
 		            var posArr = selection.getSelectedRows();
-		            WAF.sources.employee.delSelected({
+		            WAF.sources.paymentOut.delSelected({
 		                onSuccess: function(evt) {
-		                    WAF.sources.employee.setEntityCollection(evt.result);
+		                    WAF.sources.paymentOut.setEntityCollection(evt.result);
 		                }
 		            }, posArr);
 		        }
@@ -403,17 +403,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		function buildSelection(event)
      	{
      		var collec = event.entityCollection;
-         	sources.employee.setEntityCollection(collec);
+         	sources.paymentOut.setEntityCollection(collec);
      	}
-     	var selection = sources.employee.getSelection();
-  		var collection = sources.employee.getEntityCollection();
+     	var selection = sources.paymentOut.getSelection();
+  		var collection = sources.paymentOut.getEntityCollection();
         collection.buildFromSelection(selection, { onSuccess: buildSelection });
 	};// @lock
 
 	btnShowAll.click = function btnShowAll_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		sources.employee.allEntities({ keepOrderBy: true } );
+		sources.paymentOut.allEntities({ keepOrderBy: true } );
 		GlobalQuery="";
 	};// @lock
 
@@ -448,15 +448,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSDel.click = function icoSDel_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var selection = sources.employee.getSelection();
+		var selection = sources.paymentOut.getSelection();
 		var numSel = selection.countSelected();
 		if (numSel > 0) {
 		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
 		        if (flag) {
 		            var posArr = selection.getSelectedRows();
-		            WAF.sources.employee.delSelected({
+		            WAF.sources.paymentOut.delSelected({
 		                onSuccess: function(evt) {
-		                    WAF.sources.employee.setEntityCollection(evt.result);
+		                    WAF.sources.paymentOut.setEntityCollection(evt.result);
 		                }
 		            }, posArr);
 		        }
@@ -468,16 +468,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSLast.click = function icoSLast_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-		    sources.employee.save({
+		    sources.paymentOut.save({
 		        onSuccess: function(event) {
-		            var last = sources.employee.length;
+		            var last = sources.paymentOut.length;
 		            if (last > 1) {
-		                sources.employee.select(last - 1, {
+		                sources.paymentOut.select(last - 1, {
 		                    onError: function(error) {
 		                        jAlert(error['error'][0].message,"アラート");
 		                    }
@@ -494,14 +494,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSFirst.click = function icoSFirst_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.select(0,
+		        	sources.paymentOut.select(0,
 		        	{
 				        onError: function(error) {
 				        	jAlert(error['error'][0].message,"アラート");
@@ -518,14 +518,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSNext.click = function icoSNext_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.selectNext();
+		        	sources.paymentOut.selectNext();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -537,14 +537,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSPrev.click = function icoSPrev_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.selectPrevious();
+		        	sources.paymentOut.selectPrevious();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -556,16 +556,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSSave.click = function icoSSave_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
-		sources.employee.save({
+		var isNew = sources.paymentOut.isNewElement();
+		sources.paymentOut.save({
 	        onSuccess: function(event) {
 	        	if(isNew){
 	        		jAlert("保存しました。","アラート",function(){
 	        			//Cap nhat datasource cho supplier
-						sources.employee.addEntity(sources.employee.getCurrentElement());
+						sources.paymentOut.addEntity(sources.paymentOut.getCurrentElement());
 						
 						//New Entity
-						sources.employee.newEntity();
+						sources.paymentOut.newEntity();
 						
 						//Set focus cho input
 						$$("txtempCode").focus();
@@ -592,7 +592,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnAddNew.click = function btnAddNew_click (event)// @startlock
 	{// @endlock
 		//New Entity
-		sources.employee.newEntity();
+		sources.paymentOut.newEntity();
 		
 		// Add your code here
 		$$('empcontainer').selectTab(2);
