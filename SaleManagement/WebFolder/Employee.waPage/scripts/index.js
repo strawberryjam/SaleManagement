@@ -22,6 +22,11 @@ var GlobalQuery="";
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var cbxExact_4 = {};	// @combobox
+	var cbxExact_3 = {};	// @combobox
+	var cbxExact_2 = {};	// @combobox
+	var cbxExact_1 = {};	// @combobox
+	var cbxExact = {};	// @combobox
 	var btnClearSearch = {};	// @button
 	var btnAddSearch = {};	// @button
 	var btnSearch = {};	// @button
@@ -49,6 +54,76 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	cbxExact_4.change = function cbxExact_4_change (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if($$('cbxExact_4').getValue()=='の範囲の')
+		{
+			$$('ctnBetween_4').show();
+			$$('txtValueSearch_4').hide();
+			
+		}else{
+			$$('ctnBetween_4').hide();
+			$$('txtValueSearch_4').show();
+		}
+	};// @lock
+
+	cbxExact_3.change = function cbxExact_3_change (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if($$('cbxExact_3').getValue()=='の範囲の')
+		{
+			$$('ctnBetween_3').show();
+			$$('txtValueSearch_3').hide();
+			
+		}else{
+			$$('ctnBetween_3').hide();
+			$$('txtValueSearch_3').show();
+		}
+	};// @lock
+
+	cbxExact_2.change = function cbxExact_2_change (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if($$('cbxExact_2').getValue()=='の範囲の')
+		{
+			$$('ctnBetween_2').show();
+			$$('txtValueSearch_2').hide();
+			
+		}else{
+			$$('ctnBetween_2').hide();
+			$$('txtValueSearch_2').show();
+		}
+	};// @lock
+
+	cbxExact_1.change = function cbxExact_1_change (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if($$('cbxExact_1').getValue()=='の範囲の')
+		{
+			$$('ctnBetween_1').show();
+			$$('txtValueSearch_1').hide();
+			
+		}else{
+			$$('ctnBetween_1').hide();
+			$$('txtValueSearch_1').show();
+		}
+	};// @lock
+
+	cbxExact.change = function cbxExact_change (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if($$('cbxExact').getValue()=='の範囲の')
+		{
+			$$('ctnBetween').show();
+			$$('txtValueSearch').hide();
+			
+		}else{
+			$$('ctnBetween').hide();
+			$$('txtValueSearch').show();
+		}
+	};// @lock
 
 	btnClearSearch.click = function btnClearSearch_click (event)// @startlock
 	{// @endlock
@@ -89,16 +164,69 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	btnOK.click = function btnOK_click (event)// @startlock
 	{// @endlock
-		var destSet,nameExact;
+		var destSet,nameExact,valSearch,tempvalSearch,mainOperator,mainOperatorBTfirst,mainOperatorBTlast,namevalSearchBTfirst,namevalSearchBTlast;
 		//$$('dialog1').closeDialog(); //ok button
 		var exact=$$('cbxExact').getValue();
-		var valSearch="*"+$$('txtValueSearch').getValue()+"*";
-		
-		if(exact=="Exact"){
-			valSearch=$$('txtValueSearch').getValue();
-		}
 		var fieldSearch= $$('cbxFieldName').getValue();
-		stringQuery=fieldSearch+' = '+'"'+valSearch+'"';
+		
+		//Dieu kien search
+		switch(exact)
+		{
+			case 'を含む':mainOperator=' = ';
+						valSearch="*"+$$('txtValueSearch').getValue()+"*";
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'を含まない': mainOperator=' != ';
+						valSearch="*"+$$('txtValueSearch').getValue()+"*";
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'である': mainOperator=' = ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'ではない': mainOperator=' != ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'より大きい': mainOperator=' > ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case '以上の': mainOperator=' >= ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'より小さい': mainOperator=' < ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case '以下の': mainOperator=' <= ';
+						valSearch=$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'で始まる': mainOperator=' = ';
+						valSearch=$$('txtValueSearch').getValue()+"*";
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'で終わる': mainOperator=' = ';
+						valSearch="*"+$$('txtValueSearch').getValue();
+						stringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
+						break;
+			case 'の範囲の': mainOperatorBTfirst=' >= ';
+						valSearchBTfirst=$$('txtValueSearchBTfirst').getValue();
+						mainOperatorBTlast=' <= ';
+						valSearchBTlast=$$('txtValueSearchBTlast').getValue();
+						stringQuery=' ('+fieldSearch+mainOperatorBTfirst+'"'+valSearchBTfirst+'"'+" AND "+fieldSearch+mainOperatorBTlast+'"'+valSearchBTlast+'"'+') ';
+						break;
+																															
+		}	
+		
+		
+//		if(exact=="Exact"){
+//			valSearch=$$('txtValueSearch').getValue();
+//		}
+		
+		//sstringQuery=fieldSearch+mainOperator+'"'+valSearch+'"';
 		
 		//Duyet
 		for(count=1;count<5;count++)
@@ -115,15 +243,70 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				nameValueSearch='txtValueSearch'+'_'+count;
 				nameExact='cbxExact'+'_'+count;
 				numExact=$$(nameExact).getValue();
-				var valSearchn="*"+$$(nameValueSearch).getValue()+"*";
-				if(numExact=="Exact")
+				
+				namevalSearchBTfirst='txtValueSearchBTfirst'+'_'+count;
+				namevalSearchBTlast='txtValueSearchBTlast'+'_'+count;
+//				var valSearchn="*"+$$(nameValueSearch).getValue()+"*";
+//				if(numExact=="Exact")
+//				{
+//					valSearchn=$$(nameValueSearch).getValue();
+//				}
+				//dieu kien search
+				switch(numExact)
 				{
-					valSearchn=$$(nameValueSearch).getValue();
-				}
+				case 'を含む':mainOperator=' = ';
+						valSearch="*"+$$(nameValueSearch).getValue()+"*";
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'を含まない': mainOperator=' != ';
+						valSearch="*"+$$(nameValueSearch).getValue()+"*";
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'である': mainOperator=' = ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'ではない': mainOperator=' != ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'より大きい': mainOperator=' > ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case '以上の': mainOperator=' >= ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'より小さい': mainOperator=' < ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case '以下の': mainOperator=' <= ';
+						valSearch=$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'で始まる': mainOperator=' = ';
+						valSearch=$$(nameValueSearch).getValue()+"*";
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'で終わる': mainOperator=' = ';
+						valSearch="*"+$$(nameValueSearch).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+mainOperator+'"'+valSearch+'"';
+						break;
+				case 'の範囲の': mainOperatorBTfirst=' >= ';
+						valSearchBTfirst=$$(namevalSearchBTfirst).getValue();
+						mainOperatorBTlast=' <= ';
+						valSearchBTlast=$$(namevalSearchBTlast).getValue();
+						stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' ('+$$(nameFieldSearch).getValue()+mainOperatorBTfirst+'"'+valSearchBTfirst+'"'+" AND "+$$(nameFieldSearch).getValue()+mainOperatorBTlast+'"'+valSearchBTlast+'"'+') ';
+						break;
+																															
+			}	
+				
 				
 				//valSearchn=$$(nameValueSearch).getValue();
 				
-				stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+' = '+'"'+valSearchn+'"';
+				//stringQuery=stringQuery + ' ' + $$(nameAndOr).getValue()+' '+$$(nameFieldSearch).getValue()+' = '+'"'+valSearchn+'"';
 			}
 			
 			
@@ -451,6 +634,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("cbxExact_4", "change", cbxExact_4.change, "WAF");
+	WAF.addListener("cbxExact_3", "change", cbxExact_3.change, "WAF");
+	WAF.addListener("cbxExact_2", "change", cbxExact_2.change, "WAF");
+	WAF.addListener("cbxExact_1", "change", cbxExact_1.change, "WAF");
+	WAF.addListener("cbxExact", "change", cbxExact.change, "WAF");
 	WAF.addListener("btnClearSearch", "click", btnClearSearch.click, "WAF");
 	WAF.addListener("btnAddSearch", "click", btnAddSearch.click, "WAF");
 	WAF.addListener("btnSearch", "click", btnSearch.click, "WAF");
