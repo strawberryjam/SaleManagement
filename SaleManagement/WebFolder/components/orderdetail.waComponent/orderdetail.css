@@ -1,0 +1,75 @@
+﻿
+.center {
+	 padding-left: 0px !important;
+	 padding-right: 0px !important;
+	 text-align: center !important;
+	 
+}
+
+.left {
+	 text-align: left !important;
+	 
+}
+
+.right {
+	 padding-left: 0px !important;
+	 padding-right: 5px !important;
+	 text-align: right !important;
+	 
+}
+
+.icenter {
+	 text-align: center !important;
+	 
+}
+
+.iright {
+	 text-align: right !important;
+	 
+}
+
+.ileft {
+	 text-align: left !important;
+	 
+}
+
+.orderdetail {
+	 font-family: Verdana, Geneva, sans-serif;
+	 
+}
+
+.orderdetail .waf-dataGrid-row {
+	 position: inherit !important;
+	 
+}
+
+.orderdetail .waf-dataGrid-cell {
+	border-left:1px solid #CCCCCC !important;
+	font-weight:normal !important;
+	color: #4C4C4C !important;
+}
+
+.orderdetail .waf-dataGrid-col-0 {
+    border-left-color: rgba(0, 0, 0, 0) !important;
+}
+
+.orderdetail .waf-dataGrid-cell input.content-edit {
+	border:none;
+	 width: 99%;
+	 height: 100%;
+	 background-color: inherit;
+	 font-size: 12px;
+	 
+}
+.orderdetail .waf-dataGrid-col-7 {
+	text-align:center !important;
+}
+
+.orderdetail input.checkbox {
+	margin:0px;
+	padding:0px;
+}
+.orderdetail input.content {
+	bottom:0px;
+}
+

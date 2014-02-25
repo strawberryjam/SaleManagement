@@ -10,14 +10,15 @@
 			{
 				"panelColor" : "#CCC1D9",
 				"methodInhVisible" : "false",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 554,
-						"Y" : 22
+						"X" : 508,
+						"Y" : 205
 					}
 				}
 			},
@@ -25,14 +26,15 @@
 			{
 				"panelColor" : "rgb(255, 255, 0)",
 				"methodInhVisible" : "false",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 295,
-						"Y" : 22
+						"X" : 110,
+						"Y" : 23
 					}
 				}
 			},
@@ -40,28 +42,30 @@
 			{
 				"panelColor" : "#fff",
 				"methodInhVisible" : "false",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 38,
-						"Y" : 22
+						"X" : 109,
+						"Y" : 204
 					}
 				}
 			},
 			"PaymentOut" : 
 			{
 				"panelColor" : "rgb(255, 78, 89)",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 305,
-						"Y" : 620
+						"X" : 109,
+						"Y" : 105
 					}
 				}
 			},
@@ -69,50 +73,81 @@
 			{
 				"panelColor" : "#548DD4",
 				"methodInhVisible" : "false",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 37,
-						"Y" : 405
+						"X" : 110,
+						"Y" : 304
 					}
 				}
 			},
 			"Product" : 
 			{
 				"panelColor" : "#E5B9B7",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"isOpen" : "true",
 					"pathVisible" : true,
 					"position" : 
 					{
-						"X" : 569,
-						"Y" : 379
+						"X" : 508,
+						"Y" : 106
 					}
 				}
 			},
 			"Customer" : 
 			{
 				"panelColor" : "#76923C",
+				"isMinimized" : "true",
 				"panel" : 
 				{
 					"pathVisible" : true,
 					"isOpen" : "true",
 					"position" : 
 					{
-						"X" : 826,
-						"Y" : 29
+						"X" : 507,
+						"Y" : 308
+					}
+				}
+			},
+			"Order" : 
+			{
+				"panelColor" : "#7F7F7F",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 122,
+						"Y" : 408
+					}
+				}
+			},
+			"Orderdetail" : 
+			{
+				"panelColor" : "rgb(127, 127, 127)",
+				"panel" : 
+				{
+					"isOpen" : "true",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 524,
+						"Y" : 407
 					}
 				}
 			}
 		},
 		"model" : 
 		{
-			"workspaceLeft" : 449,
-			"workspaceTop" : 0,
+			"workspaceLeft" : 0,
+			"workspaceTop" : 98,
 			"scriptMode" : "manual",
 			"lastScriptLocation" : 
 			{
@@ -156,6 +191,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -313,6 +349,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -399,6 +436,181 @@
 			]
 		},
 		{
+			"name" : "Order",
+			"className" : "Order",
+			"collectionName" : "OrderCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "OrderCode",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "OrderDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : false
+				},
+				{
+					"name" : "DeliveryDate",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : false
+				},
+				{
+					"name" : "SupCode",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "SupName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "Shopcode",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "Shopname",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "EmployeeCode",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "EmployeeName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "Note",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "TotalQuantity",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "TotalMoney",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "orderdetailCollection",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "OrderdetailCollection",
+					"reversePath" : true,
+					"path" : "RID"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "Orderdetail",
+			"className" : "Orderdetail",
+			"collectionName" : "OrderdetailCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
+				},
+				{
+					"name" : "RID",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Order",
+					"path" : "Order"
+				},
+				{
+					"name" : "ProductCode",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "ProductName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "Unit",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "UnitPrice",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "RetailPrice",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				},
+				{
+					"name" : "Money",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
 			"name" : "PaymentOut",
 			"className" : "PaymentOut",
 			"collectionName" : "PaymentOutCollection",
@@ -409,6 +621,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -496,6 +709,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -604,6 +818,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -692,6 +907,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
@@ -783,6 +999,7 @@
 					"name" : "ID",
 					"kind" : "storage",
 					"scope" : "public",
+					"indexed" : true,
 					"unique" : true,
 					"autosequence" : true,
 					"type" : "long",
