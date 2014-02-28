@@ -3,6 +3,350 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#button20 {
+	 z-index: 2;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 8px;
+	
+	 position: absolute;
+	 
+}
+
+#button19 {
+	 z-index: 1;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 73px;
+	
+	 position: absolute;
+	 
+}
+
+#container14 {
+	 z-index: 3;
+	 height: 25px;
+	 bottom: 0px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#container13 {
+	 z-index: 2;
+	 top: 25px;
+	 bottom: 25px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#button18 {
+	 z-index: 3;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 8px;
+	
+	 position: absolute;
+	 
+}
+
+#button17 {
+	 z-index: 2;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 46px;
+	
+	 position: absolute;
+	 
+}
+
+#button16 {
+	 z-index: 1;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 27px;
+	
+	 position: absolute;
+	 
+}
+
+#image3 {
+	 width: 20px;
+	 height: 20px;
+	 top: 2px;
+	 left: 2px;
+	
+	 position: absolute;
+	 
+}
+
+#richText6 {
+	 z-index: -1;
+	 height: 14px;
+	 top: 6px;
+	 left: 0px;
+	 right: 242px;
+	
+	 position: absolute;
+	 
+}
+
+#container12 {
+	 z-index: 1;
+	 height: 25px;
+	 top: 0px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#wysiwyg1 {
+	 z-index: 9;
+	 width: 415px;
+	 height: 87px;
+	 top: 139px;
+	 left: 86px;
+	
+	 position: absolute;
+	 
+}
+
+#label6 {
+	 z-index: 9;
+	 width: 50px;
+	 height: 13px;
+	 top: 139px;
+	 left: 31px;
+	
+	 position: absolute;
+	 min-width: 50px;
+	 
+}
+
+#textField4 {
+	 z-index: 8;
+	 width: 275px;
+	 height: 22px;
+	 top: 100px;
+	 left: 86px;
+	
+	 position: absolute;
+	 
+}
+
+#label4 {
+	 z-index: 8;
+	 width: 50px;
+	 height: 13px;
+	 top: 104.5px;
+	 left: 31px;
+	
+	 position: absolute;
+	 min-width: 50px;
+	 
+}
+
+#textField3 {
+	 z-index: 6;
+	 width: 130px;
+	 height: 22px;
+	 top: 60px;
+	 left: 87px;
+	
+	 position: absolute;
+	 
+}
+
+#label3 {
+	 z-index: 6;
+	 width: 50px;
+	 height: 13px;
+	 top: 64.5px;
+	 left: 32px;
+	
+	 position: absolute;
+	 min-width: 50px;
+	 
+}
+
+#textField2 {
+	 z-index: 4;
+	 width: 130px;
+	 height: 22px;
+	 top: 21px;
+	 left: 344px;
+	
+	 position: absolute;
+	 
+}
+
+#label2 {
+	 z-index: 4;
+	 width: 50px;
+	 height: 13px;
+	 top: 25.5px;
+	 left: 289px;
+	
+	 position: absolute;
+	 min-width: 50px;
+	 
+}
+
+#textField1 {
+	 z-index: 2;
+	 width: 130px;
+	 height: 22px;
+	 top: 20px;
+	 left: 87px;
+	
+	 position: absolute;
+	 
+}
+
+#label1 {
+	 z-index: 2;
+	 width: 50px;
+	 height: 13px;
+	 top: 24.5px;
+	 left: 32px;
+	
+	 position: absolute;
+	 min-width: 50px;
+	 
+}
+
+#container11 {
+	 z-index: 1;
+	 width: 528px;
+	 height: 336px;
+	 top: -1px;
+	 left: -1px;
+	
+	 position: absolute;
+	 
+}
+
+#button14 {
+	 z-index: 2;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 8px;
+	
+	 position: absolute;
+	 
+}
+
+#button13 {
+	 z-index: 1;
+	 width: 60px;
+	 height: 20px;
+	 top: 2px;
+	 right: 73px;
+	
+	 position: absolute;
+	 
+}
+
+#container10 {
+	 z-index: 3;
+	 height: 25px;
+	 bottom: 0px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#container9 {
+	 z-index: 2;
+	 top: 25px;
+	 bottom: 25px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#button12 {
+	 z-index: 3;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 8px;
+	
+	 position: absolute;
+	 
+}
+
+#button11 {
+	 z-index: 2;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 46px;
+	
+	 position: absolute;
+	 
+}
+
+#button10 {
+	 z-index: 1;
+	 width: 15px;
+	 height: 15px;
+	 top: 5px;
+	 right: 27px;
+	
+	 position: absolute;
+	 
+}
+
+#image2 {
+	 width: 20px;
+	 height: 20px;
+	 top: 2px;
+	 left: 2px;
+	
+	 position: absolute;
+	 
+}
+
+#richText5 {
+	 z-index: -1;
+	 height: 14px;
+	 top: 6px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
+#container8 {
+	 z-index: 1;
+	 height: 25px;
+	 top: 0px;
+	 left: 0px;
+	 right: 0px;
+	
+	 position: absolute;
+	 
+}
+
 #container7 {
 	 z-index: 20;
 	 width: 273px;
@@ -1877,6 +2221,50 @@
 	 height: 24px;
 	 top: 1px;
 	 left: 149px;
+	
+	 position: absolute;
+	 
+}
+
+#btnSend {
+	 z-index: 5;
+	 width: 92px;
+	 height: 22px;
+	 top: 1051px;
+	 left: 605px;
+	
+	 position: absolute;
+	 
+}
+
+#message {
+	 z-index: 1;
+	 width: 253px;
+	 height: 43px;
+	 top: 15px;
+	 left: 22px;
+	
+	 position: absolute;
+	 
+}
+
+#dlgSendMail {
+	 z-index: 3;
+	 width: 529px;
+	 height: 387px;
+	 top: 688px;
+	 left: 562px;
+	
+	 position: absolute;
+	 
+}
+
+#dlgMessageSendMail {
+	 z-index: 10;
+	 width: 294px;
+	 height: 131px;
+	 top: 59px;
+	 left: 126px;
 	
 	 position: absolute;
 	 

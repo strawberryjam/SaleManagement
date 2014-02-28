@@ -22,6 +22,12 @@ var GlobalQuery="";
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var btnEmail = {};	// @button
+	var button20 = {};	// @button
+	var button19 = {};	// @button
+	var btnSend = {};	// @button
+	var button14 = {};	// @button
+	var button13 = {};	// @button
 	var cbxExact_4 = {};	// @combobox
 	var cbxExact_3 = {};	// @combobox
 	var cbxExact_2 = {};	// @combobox
@@ -54,6 +60,78 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	btnEmail.click = function btnEmail_click (event)// @startlock
+	{// @endlock
+		//Show dialog send mail
+		$$('dlgSendMail').center();
+		$$('dlgSendMail').displayDialog();
+	};// @lock
+
+	button20.click = function button20_click (event)// @startlock
+	{// @endlock
+		$$('dialog2').closeDialog(); //ok button
+	};// @lock
+
+	button19.click = function button19_click (event)// @startlock
+	{// @endlock
+		$$('dialog2').closeDialog(); //cancel button
+	};// @lock
+
+	btnSend.click = function btnSend_click (event)// @startlock
+	{// @endlock
+		
+		// Add your code here
+		var xhr=new XMLHttpRequest();
+        //Create an empty FormData object
+    	var formdata=new FormData();
+        //Fill the formdata object using the mail datasource values
+    	formdata.append('From',objEmail.From)
+    	formdata.append('To',objEmail.To)
+    	formdata.append('Pass',objEmail.Pass)
+    	formdata.append('Title',objEmail.Title)
+    	formdata.append('Content',$$('wysiwyg1').getValue());
+ 
+        //Add a listener to read the response of the handler (server side)
+    	xhr.addEventListener("load", function (evt) {
+        switch(evt.target.responseText){
+            case 'true' :
+                $$('message').setValue('Your message has been sent');
+                $$('message').$domNode.css({
+                    color : 'green'
+                });
+                break;
+        //If the sendMail function response is true,
+        //then a green message will be displayed in the
+        //message dialog
+ 
+            case 'false' :
+                $$('message').setValue('Your message has not been sent');
+                $$('message').$domNode.css({
+                    color : 'red'
+                });
+                break;
+        //If the sendMail function response is false,
+        //then a red message will be displayed on the message
+        //dialog
+        	}
+        	$$('dlgMessageSendMail').displayDialog();
+    	}, false);
+ 
+    	xhr.open('POST','/sendMail',true); //call the sendMail handler
+    	xhr.send(formdata); //Send the formdata object to the handler on the server
+		
+	};// @lock
+
+	button14.click = function button14_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //ok button
+	};// @lock
+
+	button13.click = function button13_click (event)// @startlock
+	{// @endlock
+		$$('dialog1').closeDialog(); //cancel button
+	};// @lock
 
 	cbxExact_4.change = function cbxExact_4_change (event)// @startlock
 	{// @endlock
@@ -634,6 +712,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("btnEmail", "click", btnEmail.click, "WAF");
+	WAF.addListener("button20", "click", button20.click, "WAF");
+	WAF.addListener("button19", "click", button19.click, "WAF");
+	WAF.addListener("btnSend", "click", btnSend.click, "WAF");
+	WAF.addListener("button14", "click", button14.click, "WAF");
+	WAF.addListener("button13", "click", button13.click, "WAF");
 	WAF.addListener("cbxExact_4", "change", cbxExact_4.change, "WAF");
 	WAF.addListener("cbxExact_3", "change", cbxExact_3.change, "WAF");
 	WAF.addListener("cbxExact_2", "change", cbxExact_2.change, "WAF");
