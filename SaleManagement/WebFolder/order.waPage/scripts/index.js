@@ -319,7 +319,27 @@ function _init() {
         	var name = $(this).attr("name");
             switch (name) {
             case 'ProductCode':
-            	
+            	$(this).closest(".waf-dataGrid-row").addClass("haschange");
+            	if (isdlgselectclose == false) {
+					selectfor = "PRD";
+					$("#subdatagrid").hide();
+					$("#shopdatagrid").hide();
+					$("#empdatagrid").hide();
+					$("#productdatagrid").show();
+				    var val = $.trim($(this).val());
+				    if (val == "") $$("txtSupName").setValue("");
+				    else {
+				        if (val == "@") sources.product.allEntities();
+				        else {
+				            val = val.replace(/@/g, "");
+				            sources.product.query("'ProductCode' = :1 ", "*" + val + "*");
+				        }
+				        $$("dlgselect").center();
+				    	$$("dlgselect").displayDialog();
+				    	$$("txtSearch").focus();
+				    }
+				}
+				isdlgselectclose = false;
                 break;
             case 'UnitPrice':
             	sum_unitprice();
@@ -429,9 +449,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		isdlgselectclose = true;
 		$$("dlgselect").closeDialog();
-		$$("txtSupCode").setValue(sources.supplier.SupCode);
-		$$("txtSupName").setValue(sources.supplier.SupName);
-		$$("txtShopcode").focus();
+		var rowchange = $(".orderdetail .waf-widget-body .haschange");
+		if(rowchange.length == 1){
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-1 input").val(sources.product.ProductCode);
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-2 input").val(sources.product.ProductName);
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").val(sources.product.Unit);
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-4 input").val(formatnum(sources.product.UnitPrice));
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-5 input").val(formatnum(sources.product.RetailPrice));
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-6 input").val(formatnum(sources.product.UnitPrice*sources.product.RetailPrice));
+			rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").select();
+			rowchange.removeClass("haschange");
+		}		
 		return false;
 	};// @lock
 
@@ -477,6 +505,20 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 					$$("txtEmployeeName").setValue(sources.employee.EmployeeName);
 					$(".orderdetail .waf-widget-body .waf-dataGrid-row .waf-datagrid-row-inside:first .waf-dataGrid-col-1 input").select();
 			    }
+			    else if(selectfor == "PRD"){
+			    	var rowchange = $(".orderdetail .waf-widget-body .haschange");
+					if(rowchange.length == 1){
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-1 input").val(sources.product.ProductCode);
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-2 input").val(sources.product.ProductName);
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").val(sources.product.Unit);
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-4 input").val(formatnum(sources.product.UnitPrice));
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-5 input").val(formatnum(sources.product.RetailPrice));
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-6 input").val(formatnum(sources.product.UnitPrice*sources.product.RetailPrice));
+						rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").select();
+						rowchange.removeClass("haschange");
+					}	
+			    }
+			    	
 		        return false;
 		    }
 		    else {
@@ -490,6 +532,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				    else if(selectfor == "EMP"){
 				    	sources.employee.allEntities();
 				    }
+				    else if(selectfor == "PRD"){
+				    	sources.product.allEntities();
+				    }
 		        	
 				}
 		        else {
@@ -502,6 +547,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				    }
 				    else if(selectfor == "EMP"){
 				    	sources.employee.query("'EmployeeCode' = :1 ", "*" + val + "*");
+				    }
+				    else if(selectfor == "PRD"){
+				    	sources.product.query("'ProductCode' = :1 ", "*" + val + "*");
 				    }
 		            
 		        }
@@ -520,6 +568,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    else if(selectfor == "EMP"){
 		    	sources.supplier.selectPrevious();
 		    }
+		    else if(selectfor == "PRD"){
+		    	sources.product.selectPrevious();
+		    }
 		}
 		else if (event.keyCode == 40) { //DOWN
 			if(selectfor == "SUP"){
@@ -530,6 +581,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    }
 		    else if(selectfor == "EMP"){
 		    	sources.supplier.selectNext();
+		    }
+		    else if(selectfor == "PRD"){
+		    	sources.product.selectNext();
 		    }
 		}
 	};// @lock
@@ -555,6 +609,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 				$$("txtEmployeeName").setValue(sources.employee.EmployeeName);
 				$$("txtEmployeeCode").focus();
 		    }
+		    else if(selectfor == "PRD"){
+		    	var rowchange = $(".orderdetail .waf-widget-body .haschange");
+				if(rowchange.length == 1){
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-1 input").val(sources.product.ProductCode);
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-2 input").val(sources.product.ProductName);
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").val(sources.product.Unit);
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-4 input").val(formatnum(sources.product.UnitPrice));
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-5 input").val(formatnum(sources.product.RetailPrice));
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-6 input").val(formatnum(sources.product.UnitPrice*sources.product.RetailPrice));
+					rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").select();
+					rowchange.removeClass("haschange");
+				}	
+		    }
 	        return false;
 	    }
 	    else {
@@ -568,6 +635,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			    else if(selectfor == "EMP"){
 			    	sources.employee.allEntities();
 			    }
+			    else if(selectfor == "RRD"){
+			    	sources.product.allEntities();
+			    }
 	        	
 			}
 	        else {
@@ -580,6 +650,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			    }
 			    else if(selectfor == "EMP"){
 			    	sources.employee.query("'EmployeeCode' = :1 ", "*" + val + "*");
+			    }
+			    else if(selectfor == "PRD"){
+			    	sources.product.query("'ProductCode' = :1 ", "*" + val + "*");
 			    }
 	            
 	        }
@@ -606,6 +679,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	    	$$("txtEmployeeCode").setValue("");
 			$$("txtEmployeeName").setValue("");
 		    $$("txtEmployeeCode").focus();
+	    }
+	    else if(selectfor == "PRD"){
+	    	var rowchange = $(".orderdetail .waf-widget-body .haschange");
+			if(rowchange.length == 1){
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-1 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-2 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-3 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-4 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-5 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-6 input").val("");
+				rowchange.find(".waf-datagrid-row-inside .waf-dataGrid-col-1 input").focus();
+				rowchange.removeClass("haschange");
+			}	
 	    }
 		
 	};// @lock
@@ -654,7 +740,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			$("#subdatagrid").show();
 			$("#shopdatagrid").hide();
 			$("#empdatagrid").hide();
-			$("#productdatagridS").hide();
+			$("#productdatagrid").hide();
 		    var val = $.trim($$("txtSupCode").getValue());
 		    if (val == "") $$("txtSupName").setValue("");
 		    else {
@@ -686,7 +772,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			$("#subdatagrid").hide();
 			$("#shopdatagrid").show();
 			$("#empdatagrid").hide();
-			$("#productdatagridS").hide();
+			$("#productdatagrid").hide();
 			
 		    var val = $.trim($$("txtShopcode").getValue());
 		    if (val == "") $$("txtShopname").setValue("");
