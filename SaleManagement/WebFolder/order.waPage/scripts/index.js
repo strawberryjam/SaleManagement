@@ -1,4 +1,5 @@
-﻿var isdlgclose = false;
+﻿var selectfor = "SUP";
+var isdlgselectclose = false;
 function draw_detail(detaildata) {
     var detail = "";
     var container = '<div style="width: 668px; height: 135px;" class="container">';
@@ -275,6 +276,7 @@ function cal_money(obj){
 	currow.find('.waf-dataGrid-col-6 input').val(formatnum(Money));
 }
 function _init() {
+	isdlgselectclose = false;
     $(".content-edit").live({
         keydown: function(event) {
             var name = $(this).attr("name");
@@ -388,7 +390,12 @@ WAF.Widget.prototype.center = function(){
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var isdlgclosesss = {};	// @icon
+	var productdatagrid = {};	// @dataGrid
+	var empdatagrid = {};	// @dataGrid
+	var shopdatagrid = {};	// @dataGrid
+	var txtSearch = {};	// @textField
+	var searchico = {};	// @icon
+	var iconsdlgclose = {};	// @icon
 	var subdatagrid = {};	// @dataGrid
 	var documentEvent = {};	// @document
 	var txtTotalMoney = {};	// @textField
@@ -418,18 +425,199 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // eventHandlers// @lock
 
-	isdlgclosesss.click = function isdlgclosesss_click (event)// @startlock
+	productdatagrid.onRowClick = function productdatagrid_onRowClick (event)// @startlock
 	{// @endlock
-		$$("dlgselect").closeDialog();
-	};// @lock
-
-	subdatagrid.onRowClick = function subdatagrid_onRowClick (event)// @startlock
-	{// @endlock
-		isdlgclose = true;
+		isdlgselectclose = true;
 		$$("dlgselect").closeDialog();
 		$$("txtSupCode").setValue(sources.supplier.SupCode);
 		$$("txtSupName").setValue(sources.supplier.SupName);
 		$$("txtShopcode").focus();
+		return false;
+	};// @lock
+
+	empdatagrid.onRowClick = function empdatagrid_onRowClick (event)// @startlock
+	{// @endlock
+		isdlgselectclose = true;
+		$$("dlgselect").closeDialog();
+		$$("txtEmployeeCode").setValue(sources.employee.EmployeeCode);
+		$$("txtEmployeeName").setValue(sources.employee.EmployeeName);
+		$(".orderdetail .waf-widget-body .waf-dataGrid-row .waf-datagrid-row-inside:first .waf-dataGrid-col-1 input").select();
+		return false;
+	};// @lock
+
+	shopdatagrid.onRowClick = function shopdatagrid_onRowClick (event)// @startlock
+	{// @endlock
+		isdlgselectclose = true;
+		$$("dlgselect").closeDialog();
+		$$("txtShopcode").setValue(sources.shop.Shopcode);
+		$$("txtShopname").setValue(sources.shop.Shopname);
+		$$("txtEmployeeCode").focus();
+		return false;
+	};// @lock
+
+	txtSearch.keydown = function txtSearch_keydown (event)// @startlock
+	{// @endlock
+		if (event.keyCode == 13) {
+		    var val = $.trim($$("txtSearch").getValue());
+		    if (val == "") {
+		        isdlgselectclose = true;
+		        $$("dlgselect").closeDialog();
+		        if(selectfor == "SUP"){
+			        $$("txtSupCode").setValue(sources.supplier.SupCode);
+			        $$("txtSupName").setValue(sources.supplier.SupName);
+			        $$("txtShopcode").focus();
+			    }
+			    else if(selectfor == "SHOP"){
+			    	$$("txtShopcode").setValue(sources.shop.Shopcode);
+			        $$("txtShopname").setValue(sources.shop.Shopname);
+			        $$("txtEmployeeCode").focus();
+			    }
+			    else if(selectfor == "EMP"){
+			    	$$("txtEmployeeCode").setValue(sources.employee.EmployeeCode);
+					$$("txtEmployeeName").setValue(sources.employee.EmployeeName);
+					$(".orderdetail .waf-widget-body .waf-dataGrid-row .waf-datagrid-row-inside:first .waf-dataGrid-col-1 input").select();
+			    }
+		        return false;
+		    }
+		    else {
+		        if (val == "@"){
+		        	if(selectfor == "SUP"){
+		        		sources.supplier.allEntities();
+				    }
+				    else if(selectfor == "SHOP"){
+				    	sources.shop.allEntities();
+				    }
+				    else if(selectfor == "EMP"){
+				    	sources.employee.allEntities();
+				    }
+		        	
+				}
+		        else {
+		            val = val.replace(/@/g, "");
+		            if(selectfor == "SUP"){
+		        		sources.supplier.query("'SupCode' = :1 ", "*" + val + "*");
+				    }
+				    else if(selectfor == "SHOP"){
+				    	sources.shop.query("'Shopcode' = :1 ", "*" + val + "*");
+				    }
+				    else if(selectfor == "EMP"){
+				    	sources.employee.query("'EmployeeCode' = :1 ", "*" + val + "*");
+				    }
+		            
+		        }
+		        $$("txtSearch").setValue("");
+		        $$("txtSearch").focus();
+		        return false;
+		    }
+		}
+		else if (event.keyCode == 38) { //UP
+			if(selectfor == "SUP"){
+        		sources.supplier.selectPrevious();
+		    }
+		    else if(selectfor == "SHOP"){
+		    	sources.shop.selectPrevious();
+		    }
+		    else if(selectfor == "EMP"){
+		    	sources.supplier.selectPrevious();
+		    }
+		}
+		else if (event.keyCode == 40) { //DOWN
+			if(selectfor == "SUP"){
+        		sources.supplier.selectNext();
+		    }
+		    else if(selectfor == "SHOP"){
+		    	sources.shop.selectNext();
+		    }
+		    else if(selectfor == "EMP"){
+		    	sources.supplier.selectNext();
+		    }
+		}
+	};// @lock
+
+	searchico.click = function searchico_click (event)// @startlock
+	{// @endlock
+		var val = $.trim($$("txtSearch").getValue());
+	    if (val == "") {
+	        isdlgselectclose = true;
+	        $$("dlgselect").closeDialog();
+	        if(selectfor == "SUP"){
+		        $$("txtSupCode").setValue(sources.supplier.SupCode);
+		        $$("txtSupName").setValue(sources.supplier.SupName);
+		        $$("txtShopcode").focus();
+		    }
+		    else if(selectfor == "SHOP"){
+		    	$$("txtShopcode").setValue(sources.shop.Shopcode);
+		        $$("txtShopname").setValue(sources.shop.Shopname);
+		        $$("txtEmployeeCode").focus();
+		    }
+		    else if(selectfor == "EMP"){
+		    	$$("txtEmployeeCode").setValue(sources.employee.EmployeeCode);
+				$$("txtEmployeeName").setValue(sources.employee.EmployeeName);
+				$$("txtEmployeeCode").focus();
+		    }
+	        return false;
+	    }
+	    else {
+	        if (val == "@"){
+	        	if(selectfor == "SUP"){
+	        		sources.supplier.allEntities();
+			    }
+			    else if(selectfor == "SHOP"){
+			    	sources.shop.allEntities();
+			    }
+			    else if(selectfor == "EMP"){
+			    	sources.employee.allEntities();
+			    }
+	        	
+			}
+	        else {
+	            val = val.replace(/@/g, "");
+	            if(selectfor == "SUP"){
+	        		sources.supplier.query("'SupCode' = :1 ", "*" + val + "*");
+			    }
+			    else if(selectfor == "SHOP"){
+			    	sources.shop.query("'Shopcode' = :1 ", "*" + val + "*");
+			    }
+			    else if(selectfor == "EMP"){
+			    	sources.employee.query("'EmployeeCode' = :1 ", "*" + val + "*");
+			    }
+	            
+	        }
+	        $$("txtSearch").setValue("");
+	        $$("txtSearch").focus();
+	        return false;
+	    }
+	};// @lock
+
+	iconsdlgclose.click = function iconsdlgclose_click (event)// @startlock
+	{// @endlock
+		$$("dlgselect").closeDialog();
+		if(selectfor == "SUP"){
+    		$$("txtSupCode").setValue("");
+			$$("txtSupName").setValue("");
+		    $$("txtSupCode").focus();
+	    }
+	    else if(selectfor == "SHOP"){
+	    	$$("txtShopcode").setValue("");
+			$$("txtShopname").setValue("");
+		    $$("txtShopcode").focus();
+	    }
+	    else if(selectfor == "EMP"){
+	    	$$("txtEmployeeCode").setValue("");
+			$$("txtEmployeeName").setValue("");
+		    $$("txtEmployeeCode").focus();
+	    }
+		
+	};// @lock
+
+	subdatagrid.onRowClick = function subdatagrid_onRowClick (event)// @startlock
+	{// @endlock
+		isdlgselectclose = true;
+		$$("dlgselect").closeDialog();
+		$$("txtSupCode").setValue(sources.supplier.SupCode);
+		$$("txtSupName").setValue(sources.supplier.SupName);
+		$$("txtShopcode").focus();
+		return false;
 	};// @lock
 
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
@@ -460,7 +648,13 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	txtSupCode.change = function txtSupCode_change (event)// @startlock
 	{// @endlock
-		if (isdlgclose == false) {
+
+		if (isdlgselectclose == false) {
+			selectfor = "SUP";
+			$("#subdatagrid").show();
+			$("#shopdatagrid").hide();
+			$("#empdatagrid").hide();
+			$("#productdatagridS").hide();
 		    var val = $.trim($$("txtSupCode").getValue());
 		    if (val == "") $$("txtSupName").setValue("");
 		    else {
@@ -474,34 +668,87 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		    	$$("txtSearch").focus();
 		    }
 		}
-		isdlgclose = false;
+		isdlgselectclose = false;
+		return false;
 	};// @lock
 
 	txtSupCode.keydown = function txtSupCode_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtEmail").focus();
+			$$("txtShopcode").focus();
 		}
+	};// @lock
+
+	txtShopcode.change = function txtShopcode_change (event)// @startlock
+	{// @endlock
+		if (isdlgselectclose == false) {
+			selectfor = "SHOP";
+			$("#subdatagrid").hide();
+			$("#shopdatagrid").show();
+			$("#empdatagrid").hide();
+			$("#productdatagridS").hide();
+			
+		    var val = $.trim($$("txtShopcode").getValue());
+		    if (val == "") $$("txtShopname").setValue("");
+		    else {
+		        if (val == "@") sources.shop.allEntities();
+		        else {
+		            val = val.replace(/@/g, "");
+		            sources.shop.query("'Shopcode' = :1 ", "*" + val + "*");
+		        }
+		        $$("dlgselect").center();
+		    	$$("dlgselect").displayDialog();
+		    	$$("txtSearch").focus();
+		    }
+		}
+		isdlgselectclose = false;
+		return false;
 	};// @lock
 
 	txtShopcode.keydown = function txtShopcode_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtEmail").focus();
+			$$("txtEmployeeCode").focus();
 		}
 	};// @lock
 
 	txtDeliveryDate.keydown = function txtDeliveryDate_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtFurigana").focus();
+			$$("txtSupCode").focus();
 		}
+	};// @lock
+
+	txtEmployeeCode.change = function txtEmployeeCode_change (event)// @startlock
+	{// @endlock
+		if (isdlgselectclose == false) {
+			selectfor = "EMP";
+			$("#subdatagrid").hide();
+			$("#shopdatagrid").hide();
+			$("#empdatagrid").show();
+			$("#productdatagrid").hide();
+			
+		    var val = $.trim($$("txtEmployeeCode").getValue());
+		    if (val == "") $$("txtEmployeeName").setValue("");
+		    else {
+		        if (val == "@") sources.employee.allEntities();
+		        else {
+		            val = val.replace(/@/g, "");
+		            sources.employee.query("'EmployeeCode' = :1 ", "*" + val + "*");
+		        }
+		        $$("dlgselect").center();
+		    	$$("dlgselect").displayDialog();
+		    	$$("txtSearch").focus();
+		    }
+		}
+		isdlgselectclose = false;
+		return false;
 	};// @lock
 
 	txtEmployeeCode.keydown = function txtEmployeeCode_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtEmail").focus();
+			$(".orderdetail .waf-widget-body .waf-dataGrid-row .waf-datagrid-row-inside:first .waf-dataGrid-col-1 input").select();
 		}
 	};// @lock
 
@@ -653,7 +900,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	txtOrderDate.keydown = function txtOrderDate_keydown (event)// @startlock
 	{// @endlock
 		if(event.keyCode == 13){
-			$$("txtInitBalance").focus();
+			$$("txtDeliveryDate").focus();
 		}
 	};// @lock
 
@@ -751,7 +998,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
-	WAF.addListener("isdlgclosesss", "click", isdlgclosesss.click, "WAF");
+	WAF.addListener("txtEmployeeCode", "change", txtEmployeeCode.change, "WAF");
+	WAF.addListener("txtShopcode", "change", txtShopcode.change, "WAF");
+	WAF.addListener("productdatagrid", "onRowClick", productdatagrid.onRowClick, "WAF");
+	WAF.addListener("empdatagrid", "onRowClick", empdatagrid.onRowClick, "WAF");
+	WAF.addListener("shopdatagrid", "onRowClick", shopdatagrid.onRowClick, "WAF");
+	WAF.addListener("txtSearch", "keydown", txtSearch.keydown, "WAF");
+	WAF.addListener("searchico", "click", searchico.click, "WAF");
+	WAF.addListener("iconsdlgclose", "click", iconsdlgclose.click, "WAF");
 	WAF.addListener("subdatagrid", "onRowClick", subdatagrid.onRowClick, "WAF");
 	WAF.addListener("txtSupCode", "change", txtSupCode.change, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
