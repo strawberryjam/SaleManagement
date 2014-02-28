@@ -22,6 +22,11 @@ var GlobalQuery="";
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var textField9 = {};	// @textField
+	var textField8 = {};	// @textField
+	var textField7 = {};	// @textField
+	var txt = {};	// @textField
+	var textField1 = {};	// @textField
 	var cbxExact_4 = {};	// @combobox
 	var cbxExact_3 = {};	// @combobox
 	var cbxExact_2 = {};	// @combobox
@@ -36,10 +41,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var btnSubSelect = {};	// @button
 	var btnShowAll = {};	// @button
 	var empDataGrid = {};	// @dataGrid
-	var txtTel = {};	// @textField
-	var txtAddress = {};	// @textField
-	var txtPostcode = {};	// @textField
-	var txtFurigana = {};	// @textField
 	var txtempName = {};	// @textField
 	var txtempCode = {};	// @textField
 	var icoSDel = {};	// @icon
@@ -47,13 +48,52 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var icoSFirst = {};	// @icon
 	var icoSNext = {};	// @icon
 	var icoSPrev = {};	// @icon
-	var txtEmail = {};	// @textField
 	var icoSSave = {};	// @icon
 	var icoSClose = {};	// @icon
 	var btnAddNew = {};	// @button
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	textField9.keydown = function textField9_keydown (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if(event.keyCode == 13){
+			$$("txtempName").focus();
+		}
+	};// @lock
+
+	textField8.keydown = function textField8_keydown (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if(event.keyCode == 13){
+			$$("txtempName").focus();
+		}
+	};// @lock
+
+	textField7.keydown = function textField7_keydown (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if(event.keyCode == 13){
+			$$("txtempName").focus();
+		}
+	};// @lock
+
+	txt.keydown = function txt_keydown (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if(event.keyCode == 13){
+			$$("txtempName").focus();
+		}
+	};// @lock
+
+	textField1.keydown = function textField1_keydown (event)// @startlock
+	{// @endlock
+		// Add your code here
+		if(event.keyCode == 13){
+			$$("txtFurigana").focus();
+		}
+	};// @lock
 
 	cbxExact_4.change = function cbxExact_4_change (event)// @startlock
 	{// @endlock
@@ -321,12 +361,12 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 			}	
 			
 			$$('txtTest').setValue(GlobalQuery);
-			sources.employee.query(GlobalQuery);
+			sources.paymentOut.query(GlobalQuery);
 
 //        	}
 
 		}else{
-			sources.employee.filterQuery(stringQuery);
+			sources.paymentOut.filterQuery(stringQuery);
 			GlobalQuery=stringQuery;
 			//$$('txtTest').setValue(GlobalQuery);
 		}
@@ -341,15 +381,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnDel.click = function btnDel_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var selection = sources.employee.getSelection();
+		var selection = sources.paymentOut.getSelection();
 		var numSel = selection.countSelected();
 		if (numSel > 0) {
 		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
 		        if (flag) {
 		            var posArr = selection.getSelectedRows();
-		            WAF.sources.employee.delSelected({
+		            WAF.sources.paymentOut.delSelected({
 		                onSuccess: function(evt) {
-		                    WAF.sources.employee.setEntityCollection(evt.result);
+		                    WAF.sources.paymentOut.setEntityCollection(evt.result);
 		                }
 		            }, posArr);
 		        }
@@ -363,17 +403,17 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		function buildSelection(event)
      	{
      		var collec = event.entityCollection;
-         	sources.employee.setEntityCollection(collec);
+         	sources.paymentOut.setEntityCollection(collec);
      	}
-     	var selection = sources.employee.getSelection();
-  		var collection = sources.employee.getEntityCollection();
+     	var selection = sources.paymentOut.getSelection();
+  		var collection = sources.paymentOut.getEntityCollection();
         collection.buildFromSelection(selection, { onSuccess: buildSelection });
 	};// @lock
 
 	btnShowAll.click = function btnShowAll_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		sources.employee.allEntities({ keepOrderBy: true } );
+		sources.paymentOut.allEntities({ keepOrderBy: true } );
 		GlobalQuery="";
 	};// @lock
 
@@ -387,38 +427,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 		//Set focus cho input
 		$$("txtempName").focus();
-	};// @lock
-
-	txtTel.keydown = function txtTel_keydown (event)// @startlock
-	{// @endlock
-		// Add your code here
-		if(event.keyCode == 13){
-			$$("txtEmail").focus();
-		}
-	};// @lock
-
-	txtAddress.keydown = function txtAddress_keydown (event)// @startlock
-	{// @endlock
-		// Add your code here
-		if(event.keyCode == 13){
-			$$("txtTel").focus();
-		}
-	};// @lock
-
-	txtPostcode.keydown = function txtPostcode_keydown (event)// @startlock
-	{// @endlock
-		// Add your code here
-		if(event.keyCode == 13){
-			$$("txtAddress").focus();
-		}
-	};// @lock
-
-	txtFurigana.keydown = function txtFurigana_keydown (event)// @startlock
-	{// @endlock
-		// Add your code here
-		if(event.keyCode == 13){
-			$$("txtPostcode").focus();
-		}
 	};// @lock
 
 	txtempName.keydown = function txtempName_keydown (event)// @startlock
@@ -440,15 +448,15 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSDel.click = function icoSDel_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var selection = sources.employee.getSelection();
+		var selection = sources.paymentOut.getSelection();
 		var numSel = selection.countSelected();
 		if (numSel > 0) {
 		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
 		        if (flag) {
 		            var posArr = selection.getSelectedRows();
-		            WAF.sources.employee.delSelected({
+		            WAF.sources.paymentOut.delSelected({
 		                onSuccess: function(evt) {
-		                    WAF.sources.employee.setEntityCollection(evt.result);
+		                    WAF.sources.paymentOut.setEntityCollection(evt.result);
 		                }
 		            }, posArr);
 		        }
@@ -460,16 +468,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSLast.click = function icoSLast_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-		    sources.employee.save({
+		    sources.paymentOut.save({
 		        onSuccess: function(event) {
-		            var last = sources.employee.length;
+		            var last = sources.paymentOut.length;
 		            if (last > 1) {
-		                sources.employee.select(last - 1, {
+		                sources.paymentOut.select(last - 1, {
 		                    onError: function(error) {
 		                        jAlert(error['error'][0].message,"アラート");
 		                    }
@@ -486,14 +494,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSFirst.click = function icoSFirst_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.select(0,
+		        	sources.paymentOut.select(0,
 		        	{
 				        onError: function(error) {
 				        	jAlert(error['error'][0].message,"アラート");
@@ -510,14 +518,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSNext.click = function icoSNext_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.selectNext();
+		        	sources.paymentOut.selectNext();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -529,14 +537,14 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	icoSPrev.click = function icoSPrev_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
+		var isNew = sources.paymentOut.isNewElement();
 		if (isNew) {
 		    return false;
 		}
 		else {
-			sources.employee.save({
+			sources.paymentOut.save({
 		        onSuccess: function(event) {
-		        	sources.employee.selectPrevious();
+		        	sources.paymentOut.selectPrevious();
 		        },
 		        onError: function(error) {
 		        	jAlert(error['error'][0].message,"アラート");
@@ -545,55 +553,19 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 	};// @lock
 
-	txtEmail.keydown = function txtEmail_keydown (event)// @startlock
-	{// @endlock
-		// Add your code here
-		if(event.keyCode == 13){
-			var seq = $.trim($$("txtempCode").getValue());
-			if(seq!=""){
-				var isNew = sources.employee.isNewElement();
-				sources.employee.save({
-			        onSuccess: function(event) {
-			        	if(isNew){
-			        		jAlert("保存しました。","アラート",function(){
-			        			//Cap nhat datasource cho customer
-								sources.employee.addEntity(sources.employee.getCurrentElement());
-								
-								//New Entity
-								sources.employee.newEntity();
-								
-								//Set focus cho input
-								$$("txtempCode").focus();
-			        		});
-				        }else{
-				        	//Close Input
-							$$("empcontainer").selectTab(1);
-				        }
-			        },
-			        onError: function(error) {
-			        	jAlert(error['error'][0].message,"アラート");
-			        }
-			    });
-			}else{
-				$$("txtempCode").focus();
-			}
-		}
-		
-	};// @lock
-
 	icoSSave.click = function icoSSave_click (event)// @startlock
 	{// @endlock
 		// Add your code here
-		var isNew = sources.employee.isNewElement();
-		sources.employee.save({
+		var isNew = sources.paymentOut.isNewElement();
+		sources.paymentOut.save({
 	        onSuccess: function(event) {
 	        	if(isNew){
 	        		jAlert("保存しました。","アラート",function(){
 	        			//Cap nhat datasource cho supplier
-						sources.employee.addEntity(sources.employee.getCurrentElement());
+						sources.paymentOut.addEntity(sources.paymentOut.getCurrentElement());
 						
 						//New Entity
-						sources.employee.newEntity();
+						sources.paymentOut.newEntity();
 						
 						//Set focus cho input
 						$$("txtempCode").focus();
@@ -620,7 +592,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	btnAddNew.click = function btnAddNew_click (event)// @startlock
 	{// @endlock
 		//New Entity
-		sources.employee.newEntity();
+		sources.paymentOut.newEntity();
 		
 		// Add your code here
 		$$('empcontainer').selectTab(2);
@@ -634,6 +606,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("textField9", "keydown", textField9.keydown, "WAF");
+	WAF.addListener("textField8", "keydown", textField8.keydown, "WAF");
+	WAF.addListener("textField7", "keydown", textField7.keydown, "WAF");
+	WAF.addListener("txt", "keydown", txt.keydown, "WAF");
+	WAF.addListener("textField1", "keydown", textField1.keydown, "WAF");
 	WAF.addListener("cbxExact_4", "change", cbxExact_4.change, "WAF");
 	WAF.addListener("cbxExact_3", "change", cbxExact_3.change, "WAF");
 	WAF.addListener("cbxExact_2", "change", cbxExact_2.change, "WAF");
@@ -648,10 +625,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("btnSubSelect", "click", btnSubSelect.click, "WAF");
 	WAF.addListener("btnShowAll", "click", btnShowAll.click, "WAF");
 	WAF.addListener("empDataGrid", "onRowDblClick", empDataGrid.onRowDblClick, "WAF");
-	WAF.addListener("txtTel", "keydown", txtTel.keydown, "WAF");
-	WAF.addListener("txtAddress", "keydown", txtAddress.keydown, "WAF");
-	WAF.addListener("txtPostcode", "keydown", txtPostcode.keydown, "WAF");
-	WAF.addListener("txtFurigana", "keydown", txtFurigana.keydown, "WAF");
 	WAF.addListener("txtempName", "keydown", txtempName.keydown, "WAF");
 	WAF.addListener("txtempCode", "keydown", txtempCode.keydown, "WAF");
 	WAF.addListener("icoSDel", "click", icoSDel.click, "WAF");
@@ -659,7 +632,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("icoSFirst", "click", icoSFirst.click, "WAF");
 	WAF.addListener("icoSNext", "click", icoSNext.click, "WAF");
 	WAF.addListener("icoSPrev", "click", icoSPrev.click, "WAF");
-	WAF.addListener("txtEmail", "keydown", txtEmail.keydown, "WAF");
 	WAF.addListener("icoSSave", "click", icoSSave.click, "WAF");
 	WAF.addListener("icoSClose", "click", icoSClose.click, "WAF");
 	WAF.addListener("btnAddNew", "click", btnAddNew.click, "WAF");

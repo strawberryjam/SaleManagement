@@ -2,6 +2,8 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var productDataGrid = {};	// @dataGrid
+	var btnDelete = {};	// @button
 	var txtSupName = {};	// @textField
 	var txtSupCode = {};	// @textField
 	var txtSalePrice = {};	// @textField
@@ -10,7 +12,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	var txtUnit = {};	// @textField
 	var txtBarcode = {};	// @textField
 	var txtProductName = {};	// @textField
-	var productDataGrid = {};	// @dataGrid
 	var btnSubselected = {};	// @button
 	var btnShowall = {};	// @button
 	var txtProductCode = {};	// @textField
@@ -29,6 +30,37 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	productDataGrid.onRowDblClick = function productDataGrid_onRowDblClick (event)// @startlock
+	{// @endlock
+		//Show Input
+		$$("productcontainer").selectTab(2);
+		
+		//Set readonly cho input
+		$$("txtSupCode").setReadOnly(true);
+		
+		//Set focus cho input
+		$$("txtProductCode").focus();
+	};// @lock
+
+	btnDelete.click = function btnDelete_click (event)// @startlock
+	{// @endlock
+		
+		var selection = sources.product.getSelection();
+		var numSel = selection.countSelected();
+		if (numSel > 0) {
+		    jConfirm("本当にこのレコードを削除してよろしいですか。?", "確認", function(flag) {
+		        if (flag) {
+		            var posArr = selection.getSelectedRows();
+		            WAF.sources.product.delSelected({
+		                onSuccess: function(evt) {
+		                    WAF.sources.product.setEntityCollection(evt.result);
+		                }
+		            }, posArr);
+		        }
+		    });
+		}
+	};// @lock
 
 	txtSupName.keydown = function txtSupName_keydown (event)// @startlock
 	{// @endlock
@@ -91,18 +123,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		}
 	};// @lock
 
-	productDataGrid.onRowDblClick = function productDataGrid_onRowDblClick (event)// @startlock
-	{// @endlock
-		//Show Input
-		$$("productcontainer").selectTab(2);
-		
-		//Set readonly cho input
-		$$("txt_bar_code").setReadOnly(true);
-		
-		//Set focus cho input
-		$$("txt_product_code").focus();
-	};// @lock
-
 	btnSubselected.click = function btnSubselected_click (event)// @startlock
 	{// @endlock
 		function buildSelection(event)
@@ -137,10 +157,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		$$("productcontainer").selectTab(2);
 		
 		//Remove readonly cho input
-		$$("txt_product_code").setReadOnly(false);
+		$$("txtBarcode").setReadOnly(false);
 		
 		//Set focus cho input
-		$$("txt_product_code").focus();
+		$$("txtProductCode").focus();
 	};// @lock
 
 	txtPostcode.keydown = function txtPostcode_keydown (event)// @startlock
@@ -180,6 +200,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		            WAF.sources.product.delSelected({
 		                onSuccess: function(evt) {
 		                    WAF.sources.product.setEntityCollection(evt.result);
+		                    $$("productcontainer").selectTab(1);
 		                }
 		            }, posArr);
 		        }
@@ -278,7 +299,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	icoSSave.click = function icoSSave_click (event)// @startlock
 	{// @endlock
-		// Add your code here
+		// Add your code here		
+		if($$('txtProductCode').getValue()==''){
+			 alert('ma san pham khong duoc rong');
+			 return ;
+	    }
 		var isNew = sources.product.isNewElement();
 		sources.product.save({
 	        onSuccess: function(event) {
@@ -291,7 +316,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 						sources.product.newEntity();
 						
 						//Set focus cho input
-						$$("txt_product_code").focus();
+						$$("txtProductCode").focus();
 	        		});
 		        }else{
 		        	//Close Input
@@ -329,6 +354,8 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("productDataGrid", "onRowDblClick", productDataGrid.onRowDblClick, "WAF");
+	WAF.addListener("btnDelete", "click", btnDelete.click, "WAF");
 	WAF.addListener("txtBarcode", "click", txtBarcode.click, "WAF");
 	WAF.addListener("txtSupName", "keydown", txtSupName.keydown, "WAF");
 	WAF.addListener("txtSupCode", "keydown", txtSupCode.keydown, "WAF");
@@ -338,7 +365,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	WAF.addListener("txtUnit", "keydown", txtUnit.keydown, "WAF");
 	WAF.addListener("txtBarcode", "keydown", txtBarcode.keydown, "WAF");
 	WAF.addListener("txtProductName", "keydown", txtProductName.keydown, "WAF");
-	WAF.addListener("productDataGrid", "onRowDblClick", productDataGrid.onRowDblClick, "WAF");
 	WAF.addListener("btnSubselected", "click", btnSubselected.click, "WAF");
 	WAF.addListener("btnShowall", "click", btnShowall.click, "WAF");
 	WAF.addListener("txtProductCode", "keydown", txtProductCode.keydown, "WAF");
